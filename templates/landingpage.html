@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <!-- CSS -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        body{
+            width: 100%;
+            font-family: sans-serif;
+        }
+
+        div{
+            margin: 30px auto;
+        }
+
+        h1{
+            font-size: 2rem;
+            padding-left: 1rem;
+            padding-top: 1.5rem;
+        }
+
+        span{
+            color: var(--blue);
+        }
+
+        .container{
+            display: inline-flex;
+            margin-left: 0;
+        }
+
+        p{
+            background: rgb(234, 232, 248);
+            border-radius: 0 25px 25px 0;
+            padding: 20px;
+            width: 230px;
+            height: max-content;
+            margin-right: 1rem;
+        }
+
+        img{
+            width: 60%;
+            height: 350px;
+        }
+
+        .center .login{
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: .4rem;
+        }
+
+        .login:after {
+            display:block;
+            clear:both;
+            content : "";
+            position: relative;
+            left    : 0;
+            bottom  : 0;
+            max-width: 300px;
+            height  : 0.3px;
+            width   : 90%;  /* or 100px */
+            border-bottom: 3.8px solid #f1f1f1;
+            margin:0 auto;
+            padding:4px 0px;
+        }
+
+        button{
+            display: flex;
+            margin: auto;
+            color: white;
+            font-size: 1rem;
+            background-color: var(--light-blue);
+            display: block;
+            margin-top: 1rem;
+            border-radius: 2.2px;
+            border: none;
+        }
+
+        button:hover{
+            background-color: #303F9F;
+        }
+
+        button.wor{
+            padding: 0.9rem 4.9rem;
+        }
+
+        button.rec{
+            padding: 0.9rem 4.5rem;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px){
+            section{
+                height: 100vh;
+            }
+
+            h1{
+                font-size: 1.7rem;
+            }
+
+            img{
+                max-width: 40%;
+                height: 39%;
+                max-height: 40%;
+            }
+            
+            button.wor{
+                padding: 0.9rem 4.9rem;
+            }
+
+            button.rec{
+                padding: 0.9rem 4.5rem;
+            }
+        }
+        
+        /*  Loader  */
+        #loading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 100;
+        }
+
+        #loading img{
+            position: absolute;
+            top: 30%;
+            left: 40%;
+        }
+
+        @media(max-width: 768px){
+            #loading{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            #loading img{
+                top: 45%;
+                left: 40%;
+                width: 100px;
+                height: 45px;
+            }
+        }
+
+        
+    </style>
+    <!-- CSS End-->
+</head>
+<body onload="welcome()">
+    <section>
+        <div id="loading">
+            <img src="./static/ajax-loader.gif" alt="">
+        </div>
+        <h1>Welcome to<br><span>UpRevol</span></h1>
+        <div class="container">
+            <p>We,team UpRevol firmly commited to delivering value to the marketplace by identify unique strengths with people. Not only we bring out talent to the limelight but also provide special opportunity to use people's unique ability to the need of market.</p>
+            <img src="./static/images/landing-bg.webp" alt="lan">
+        </div>
+        <div class="center">
+            <h3 class="login">Login</h3>
+            <a href="/login/worker"><button class="wor">I am Worker</button></a>
+            <a href="/login/rec"><button class="rec">I need Worker</button></a>
+        </div>
+    </section>
+    
+    <!--    Loader    -->
+        <script>
+            var preloader = document.getElementById('loading');
+            function welcome(){
+                preloader.style.display = 'none';
+            }
+        </script>
+</body>
+</html>

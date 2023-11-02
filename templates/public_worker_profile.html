@@ -1,0 +1,437 @@
+<!-- render through workerpublicprofile.py -->
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.51/dist/themes/light.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Applican Profile</title>
+
+    <style>
+         :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            font-family: "poppins";
+            text-decoration: none;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 600;
+        }
+        
+        i {
+            font-size: 1rem;
+        }
+        
+        .pro-image {
+            width: 6.5rem;
+            max-width:6.5rem;
+            height: 6.5rem;
+            max-height: 6.5rem;
+            object-fit: fill;
+        }
+        
+        hr {
+            margin: 15px auto;
+            width: 15%;
+            color: rgb(238, 215, 215);
+            border: solid rgb(238, 215, 215) 3px;
+            border-radius: 10px;
+        }
+        
+        .btn-primary {
+            font-size: 1rem;
+            border-radius: 4px;
+            padding: 3px 10px;
+            color: #fff;
+            background-color: var(--blue);
+        }
+        
+        .btn-primary:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+
+        .green-color {
+            color:green;
+        }
+
+        .info-btn {
+            font-size: .6rem;
+            border-radius: 20px;
+            padding: 0 5px;
+            background-color: rgb(238, 215, 215);
+            transition: none;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 10px;
+        }
+        .work-image{
+            max-height:15rem ;
+        }
+        .work-stat{
+            color: var(--blue); 
+            font-size: .8rem;
+        }
+        
+        #drawer-img {
+            border-radius: 4px;
+            background-color: #fafafa;
+            text-align: center;
+            width: 100%;
+            height: 30vh;
+            max-height: 30vh;
+        }
+        
+        .fa-user-plus {
+            font-size: .8rem;
+        }
+        .fa-star{
+            font-size: .8rem;
+        }
+        
+        .img-desc {
+            display: inline-block;
+            background-color: #444;
+            height: 8px;
+            border-radius: 100px;
+            margin: 5px 0;
+            min-width: 100px;
+            opacity: .1;
+            animation: fading 1.5s infinite;
+        }
+        .names{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .profile-bg{
+            background-color:#fafafa;
+        }
+        .semi-strong{
+            font-weight: 600;
+            font-size: .9rem;
+            color:var(--black);
+        }
+        @keyframes fading {
+            0% {
+                opacity: .1;
+            }
+            50% {
+                opacity: .2;
+            }
+            100% {
+                opacity: .1;
+            }
+        }
+       .drawer-img-container {
+       position: relative;
+    }
+    .tag {
+       float: right;
+       position: absolute;
+       right:0px;
+       top: 0px;
+       z-index: 1000;
+    }   
+    .contact a i{
+        text-decoration: none;
+        color: var(--blue);
+    }
+    .contact a {
+        text-decoration: none;
+        color: var(--black);
+    }
+    .carousel-images {
+        background-color: #fff;
+        max-height: 10vh;
+        width: 100%;
+        min-height: 10rem;
+        object-fit: fill;
+    }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid p-0 profile-bg" style="height: 100vh; overflow: scroll;">
+        <div class="container-fluid card p-0 " style="background-color:#fff;"">
+            <div class="d-flex flex-row bd-highlight p-1 mb-1">
+                {% if profile[5] == "1" %}
+                {% set fname = 'worker/' + worker_id + '/' + 'profile-' + worker_id + '.webp' %}
+                <div class="p-2 bd-highlight "><img class="pro-image" src=" {{ url_for ('static',filename=fname) }} " alt=""></i>
+                </div>
+                {% endif %}
+                {% if profile[5] != "1" %}
+                {% set fname = 'images/profile.webp' %}
+                <div class="p-2 bd-highlight "><img class="pro-image" src=" {{ url_for ('static',filename=fname) }} " alt=""></i>
+                </div>
+                {% endif %}
+                
+                <div class="p-2 bd-highlight align-items-center">
+                    {% if checksave == 1 %}
+                    <div class="names">{{profile[2]}}
+                        {% if profile[17]==1 %}
+                        <span style="font-size: 15px" class="material-icons green-color">verified </span>
+                        {% endif %}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/savelist/{{worker_id}}"><i class="fas fa-bookmark" style="color: var(--black);"></i>  
+                    </a></div>{% elif checksave == 0 %}
+                    <div class="names">{{profile[2]}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/view/savelist"><i class="fas fa-bookmark" style="color: var(--light-blue);"></i>  
+                      </a></div>{% endif %}
+                      <div class="semi-strong"><b>{{profile[8]}}</b></div>
+                      <div class="d-flex justify-content-between">
+                          <p style="margin-bottom: 0; font-size: .8rem; font-weight: 600;">1000pts <button class="info-btn ">More info</button></p>
+                      </div>
+                      <div class="stars">
+                          {% for star in range(0,profile[7]) %}
+                          <i class="fas fa-star" style="color: #ffe345;"></i> {% endfor %} {% for star in range(0,(5 - profile[7])) %}
+                          <i class="far fa-star"></i> {% endfor %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+           <div class="d-flex justify-content-center border-top border-bottom py-2 work-stat">
+            <div class="p-2 bd-highlight text-center ">
+                <div>Work Done</div>
+                <h6 style="font-weight: 600;">{{wcount}}</h6>
+            </div>
+            <div class="p-2 bd-highlight text-center">
+                <div>Status</div>
+                <h6 style="font-weight: 600;">{{status}}</h6>
+            </div>
+            <div class="p-2 bd-highlight text-center">
+                <div>Hiring Rate</div>
+                <h6 style="font-weight: 600;">{{hirring}}%</h6>
+            </div>
+        </div>
+        
+
+        
+            <div class="container py-3 d-flex justify-content-between align-items-center contact  ">
+                <a href="tel:{{profile[3]}}"><span><i class="fas fa-phone-alt px-3 "></i></span>{{profile[3]}}</a>
+                <a href="tel:{{profile[3]}}"><button class="btn btn-primary my-3 px-3 py-1 " type="button" style="background: var(--blue); border-radius: 4px;"><i style="color:#fff ;" class="fas fa-phone-alt"></i> Call </button></a>
+
+            </div>
+           <div class="px-0 container-fluid">
+                    <h5 class="p-3 ">Work Gallery</h5>
+                   <!-- show only images in carousel -->
+                    <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            {% if count != [] %}
+                            {% set fname = 'worker/' + worker_id + '/'+ 'gallery' + '/' + count[0] %}
+                            
+                          <div class="carousel-item active">
+                            <img src="{{ url_for ('static',filename=fname) }}" class="img-thumbnail w-100 carousel-images" alt="...">
+                          </div>
+                          {% endif %}
+                          {% if count != [] %}
+                            {% for i in count[1:] %}
+                            {% set fname = 'worker/' + worker_id + '/'+ 'gallery' + '/' + i %}
+                           
+                          <div class="carousel-item">
+                            <img src="{{ url_for ('static',filename=fname) }}" class="img-thumbnail w-100 carousel-images" alt="...">
+                          </div>
+                        {% endfor %}
+                        {% endif %}
+                          <!-- <div class="carousel-item">
+                            <img src="/static/images/logo.webp" class="img-thumbnail w-100 carousel-images" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/static/images/logo.webp" class="img-thumbnail w-100 carousel-images" alt="...">
+                          </div> -->
+                        
+                        </div>
+                      </div>
+                    <div class="row row-cols-5 w-100 mx-auto">
+                        <!-- show image in loop -->
+                        {% if count != [] %}
+                        {% for i in count[1:] %}
+                        {% set fname = 'worker/' + worker_id + '/'+ 'gallery' + '/' + i %}
+                        <img src="{{ url_for ('static',filename=fname) }}" class="img-thumbnail work-image col " alt="... ">
+                        {% endfor %}
+                        {% endif %}
+                        <!-- <img src="/static/images/logo.webp " class="img-thumbnail work-image col " alt="... ">
+                        <img src="/static/images/logo.webp " class="img-thumbnail work-image col " alt="... ">
+                        <img src="/static/images/logo.webp " class="img-thumbnail work-image col " alt="... "> -->
+                       <!-- if image is less than 5 show this -->
+                        
+              
+                </div>
+            </div>
+            {% if reviews != 0 %}
+            <div class="container my-3 ">
+                <h5>Reviews & Ratings</h5>
+                <div class=" card swiper mySwiper ">
+                    <div class="my-auto swiper-wrapper " style="width: 10rem; ">
+                        {% for review in reviews %}
+                        <div class="my-md-3 swiper-slide card-body d-flex flex-row bd-highlight ">
+                            <div class="bd-highligh d-flex flex-row justify-content-center align-items-evenly my-3 ">
+                                <img src="2_new.webp " alt=" " style="width: 4rem; height: 4rem; " class="rounded mx-auto ">
+                                <div class="d-inline-flex flex-column text-justify mx-3 ">
+                                    <h5 class="card-title ">{{review[0]}}</h5>
+                                    <p class="card-text text-left " style="font-size: 1rem; ">{{review[2]}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+    
+                    </div>
+    
+                    <div class="swiper-button-next "></div>
+                    <div class="swiper-button-prev "></div>
+                </div>
+            </div>
+            {% endif %}
+    
+        </div>
+    
+    <sl-drawer label="" placement="bottom" class="drawer-placement-bottom" no-header style="--size:70vh; --header-spacing:0; --body-spacing:0;">
+        <hr>
+        <div class="container-fluid my-3 ">
+            <!-- set src using js -->
+            <img  alt="" id="drawer-img" src="#"> 
+            
+                
+                <div class="d-inline-flex flex-column text-justify my-3 ">
+            
+                    <h5>Description</h5>
+                    
+                    <P id="drawer-imgdesc" class="regex-desc" ></P>
+
+                </div>
+        </div>
+      </sl-drawer>
+      <sl-button style="display: none;">Open Drawer</sl-button>   
+      {% include 'bottom_navbar.html' %}
+</body>
+
+<script>
+    function regexContent(content) {
+        var rx = /(.*)\.[^.]+$/;
+        content = decodeURIComponent(content);
+        console.log(content);
+        var a = rx.exec(content);
+        var result = a[1].substring(a[1].lastIndexOf("-") + 1);
+        result = result.substring(1);
+        console.log(result);
+        return result.replaceAll("|"," ");
+    }
+    const drawer = document.querySelector('.drawer-placement-bottom');
+    const openButton = drawer.nextElementSibling;
+    const closeButton = drawer.querySelector('sl-button[type="primary"]');
+
+    Array.from(document.querySelectorAll(".work-image")).forEach(function(element) {
+    element.addEventListener('click', function(){   let imageSource= element.attributes.src.value;
+           
+           console.log(imageSource);
+           showInDrawer(imageSource);
+           openButton.click();
+       });
+   });
+   Array.from(document.querySelectorAll(".carousel-images")).forEach(function(element) {
+    element.addEventListener('click', function(){   let imageSource= element.attributes.src.value;
+           
+           console.log(imageSource);
+           showInDrawer(imageSource);
+           openButton.click();
+       });
+   });
+
+   function showInDrawer(imageSource){
+        document.querySelector('#drawer-img').attributes.src.value = imageSource;
+        document.querySelector('#drawer-imgdesc').textContent = regexContent(imageSource);
+        
+        
+    }
+
+
+
+   
+   openButton.addEventListener('click', () => drawer.show());
+   closeButton.addEventListener('click', () => drawer.hide());
+   drawer.addEventListener('sl-initial-focus', event => {
+       event.preventDefault();
+       input.focus({
+           preventScroll: true
+       });
+   });
+  </script>
+  
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.51/dist/shoelace.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+</script>
+
+</html>

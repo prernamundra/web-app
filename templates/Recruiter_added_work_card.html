@@ -1,0 +1,133 @@
+{% include 'Navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+         		 :root {
+  --black: #545454;
+  --blue: #303F9F;
+  --light-blue:#4756b5;
+  --aliceblue: #F0F8FF;
+  --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            text-decoration: none;
+        }
+        
+        body{
+        background-color: #ECEFF1;
+        }
+
+        .image{
+            object-fit: cover;
+            border-radius: 2px;
+            min-width: 4rem;
+            max-width: 4rem;
+            min-height:4rem;
+            max-height: 4rem;
+            border: none;
+            background: #ECEFF1;
+        }
+               
+        .card-content{
+            color:var(--black);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .bold-text {
+            font-weight: 500;
+        }
+
+        
+        
+        .btn-primary{
+            font-size: 1rem;
+            border-radius: 4px;
+            padding: 3px 10px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            color: #fff;
+            background-color: var(--blue);
+        }
+
+        .btn-primary:hover{
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+            border: 1px solid #4756b5;
+        }
+        .card-container i{
+            font-size: 3rem;
+        }
+
+        .card-container a{
+            text-decoration: none;
+            color: var(--blue);
+            font-weight: 500;
+        }
+        .card-contain{
+            background-color: #fff;
+        }
+        .card-contain a {
+            color:var(--blue);
+            text-decoration: none;
+        }
+        .card-contain a:hover {
+            color:var(--light-blue);
+            
+        }
+        .card-container{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 style="text-align: center; margin: 1rem 0;">Work Details</h4>
+{% for work in works %}
+    
+    <div class="container d-flex flex-row justify-content-between card-contain rounded shadow  my-2 mx-auto">
+        <div class="d-flex flex-row bd-highlight  justify-content-start align-items-start w-100  ">
+            <div class="p-2 bd-highlight ">
+             <img class="image" src="..." alt=""> </div>
+             <div class=" d-flex flex-column justify-content-around bd-highlight card-content mx-2  w-100 h-100">
+             <div class="bold-text">{{work[9]}}</div>
+                <div style="font-size: .8rem;" class="d-flex justify-content-between mt-sm-1 me-sm-5 flex-wrap">
+                   <div ><i class="fas fa-coins" ></i> &#8377; {{work[4]}}</div>
+                   <div><a href="/work/detail/{{work[8]}}/{{rec_id}}"> View </a> | <a href="/edit/work/{{work[8]}}"> Edit </a> | <a href="/work/done/{{work[8]}}/0">Done</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+</body>
+
+</html>

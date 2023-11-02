@@ -1,0 +1,318 @@
+<!-- workersearchsort.py -->
+<!-- redirect from registration.py -->
+<!-- redirect from workerdashboard.py -->
+{% include 'worker_Navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+         :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            font-family: "poppins";
+            text-decoration: none;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            font-size: .7rem;
+            border-radius: 4px;
+            color: #fff;
+            background-color: var(--blue);
+        }
+        
+        .btn-primary:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+        
+        .image {
+            object-fit: cover;
+            border-radius: 2px;
+            min-width: 4rem;
+            max-width: 4rem;
+            max-height: 4rem;
+            min-height: 4rem;
+            border: none;
+            background: #ECEFF1;
+        }
+        
+        .card-content {
+            color: var(--black);
+            font-weight: 500;
+            font-size: .8rem;
+        }
+        
+        .bold-text {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .card-contain {
+            background-color: #fff;
+        }
+        
+        .card-contain a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        
+        .card-contain a:hover {
+            color: var(--light-blue);
+        }
+        
+        .information p {
+            font-size: .8rem;
+            margin-bottom: .3rem;
+            
+            padding: 0;
+        }
+        .btnprimary {
+            width: 50px;
+            font-size: .8rem;
+            border-radius: 4px;
+            color: #fff;
+            background-color: var(--blue);
+        }
+        .btnprimary:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+        .box {
+            height: 6rem;
+            max-height: 6rem;
+            width: 6rem;
+            max-width: 6rem;
+            background: #ECEFF1;
+            margin: 5px;
+        }
+        
+        .txt {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .label {
+            color: rgb(143, 136, 136);
+            font-size: 0.8rem;
+        }
+        
+        
+        .details img{
+            background-color: #ECEFF1;
+        height: 15%;
+        max-height: 15rem;
+        width: 100%;
+        min-height: 15rem;
+        object-fit: cover;
+    }
+        .apply-btn {
+            background-color: rgb(57, 57, 107);
+            width: 100px;
+        }
+        .date {
+            color: rgb(143,136,136);
+            font-weight: 600;
+            font-size: .7rem;
+        }
+        .detail-head{
+        color: var(--black);
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+ 
+        @media only screen and (max-width:800px) {
+            .txt {
+                color: var(--black);
+                font-size: 1rem;
+            }
+        }
+        #map{
+            height: 18rem;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid px-0 pb-5" style="background-color: #ECEFF1; height: 100vh; overflow: scroll;">
+        <h4 class="pt-3 mb-3" style="text-align: center; color: #8b8b8be0;">Choose A Work To Apply</h4>
+        {% for work in works %}{% if work[11] != 0  %}{% if work[7] | string >= dow %}
+
+        <var id="w-{{work[9]}}" hidden>{{work[9]}}</var>
+        <var id="{{work[8]}}" hidden>{{work[8]}}</var>
+        <var id="{{worker_id}}" hidden>{{worker_id}}</var>
+
+        <div class="container d-flex flex-row justify-content-start card-contain rounded shadow align-items-center mt-2 mx-auto">
+            {% set fname = 'recruiter/' + work[8] + '/' + 'Addwork/' + work[9] + '/' +  work[9] + '-1' +'.webp' %}
+            <div class=" bd-highlight p-2"><img class="image" src=" {{ url_for ('static',filename=fname) }} " alt=""> </div>
+            <div class="d-flex flex-column bd-highlight  justify-content-start align-items-start w-100 py-2 flex-wrap  ">
+                <!--<div class=" d-flex flex-column bd-highlight card-content mx-2 flex-wrap ">-->
+                    <div style=" font-weight: 500;
+                    font-size: .8rem;">{{work[10]}}</div>
+                    <div class="date">Date :</div>
+                    <div style="font-size: .6rem;">{{work[7]}}</div>
+                <!--</div>-->
+            </div>
+            <div class="cardx-contain"> <a id="w-w-{{work[9]}}"><button class="btnprimary ">View </button></a> </div>
+        </div>
+
+
+        <div style="display: none; background-color: #fff;" id="wd-{{work[9]}}" class="container jobdesc pb-3 mb-3">
+            <div class="main d-flex">
+            </div>
+            <div class="information my-2 ps-2">
+                <p><span class="label"><i class="bi bi-info-circle"></i> Description: </span><span> {{work[1]}}</span></p>
+                <p><span class="label"><i class="bi bi-geo-alt"></i> Address: </span><span> {{work[3]}}</span></p>
+                <p><span class="label"><i class="bi bi-cash-coin" ></i> Budget:  </span><span>&#8377 {{work[4]}}</span></p>
+                <p><span class="label"><i class="bi bi-stopwatch"></i> Duration:  </span><span> {{work[5]}}</span></p>
+                <!--<div class="bold-text">Title: {{work[10]}}</div>-->
+                <p><span class="label"><i class="bi bi-people"></i> Req Workers:  </span><span> {{work[6]}}</span></p>
+                
+                <!--<div>Req Workers: {{work[6]}}</div>
+                    <div>Date & time: {{work[7]}}</div>-->
+            </div>
+            <div class="details w-100 ">
+                <div class="detail-head mx-2">Details</div>
+                <div class="row mx-1">
+                  
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        {% if counts[work[9]] != [] %}
+                        {% set fname = 'recruiter/' + work[8] + '/' + 'Addwork/' + work[9] + '/' + counts[work[9]][0] %}
+                            <img class="" src=" {{ url_for ('static',filename=fname) }} ">
+                        
+                      </div>
+                      {% for i in counts[work[9]][1:] %}
+                      {% set fname = 'recruiter/' + work[8] + '/' + 'Addwork/' + work[9] + '/' +  i %}
+                      <div class="carousel-item">
+                        <img class="" src=" {{ url_for ('static',filename=fname) }} ">
+                      </div>
+                      {% endfor %}
+                        {% endif %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="container-fluid mt-2" id="map">
+            </div>
+            {% set location1 = work[12].split(',')[0] %}
+            {% set location2 = work[12].split(',')[1] %}
+            <script>
+                function initMap() {
+
+                    let myLatLng = { lat: {{location1}}, lng: {{location2}} };
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: myLatLng,
+                    });
+            
+                    let marker =  new google.maps.Marker({
+                    position: myLatLng, 
+                    map,
+                    title: "Work Location",
+                    });  
+                    marker.addListener("click", () => {
+                       window.open("https://maps.google.com/?q=" + myLatLng.lat + ","+ myLatLng.lng);  });
+                }
+             </script>
+           
+            <div class="d-flex justify-content-center mt-1 w-100">
+                <a class="w-100" id="{{work[9]}}">
+                    <button class="btn w-100 btn-primary">Apply</button>
+                </a>
+            </div>
+        </div>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi7MuwnyefX9ECu2c3igYWTw-MQoQHAzE&callback=initMap&libraries=&v=weekly"
+        async
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+        <script>
+            document.getElementById("{{work[9]}}").addEventListener('click', work_profile);
+            
+            function work_profile() {
+                var work_id = document.getElementById('w-{{work[9]}}').textContent;
+                var rec_id = document.getElementById('{{work[8]}}').textContent;
+                var worker_id = document.getElementById('{{worker_id}}').textContent;
+                var detail = new Array(work_id, rec_id, worker_id);
+                console.log(detail);
+                window.location.href = '/apply/work/' + detail;
+            }
+            document.getElementById("w-w-{{work[9]}}").addEventListener('click', full_report);
+          
+            function full_report() {
+                
+                var x = document.getElementById("wd-{{work[9]}}");
+                document.querySelectorAll(".jobdesc").forEach(function(element){
+                    console.log("Here");
+                    if(element === x)
+                        {console.log("skipped");}
+                    element.style.display ="none";
+                });
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+
+    {% endif %}{% endif %}{% endfor %}
+
+
+    </div>
+{% include 'worker_bottom_nav.html' %}
+</body>
+
+</html>

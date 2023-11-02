@@ -1,0 +1,68 @@
+<!-- render through workerapplydetails.py -->
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Applied Job</title>
+</head>
+<style>
+   
+    body {
+        font-family: "Poppins";
+    }
+    
+   
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link {
+        border: none;
+        background: none;
+    }
+    
+    .nav-link:hover {
+        cursor: pointer;
+        border-bottom: solid 2px blue;
+    }
+    
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active {
+        border: none;
+        border-bottom: solid blue 2px;
+    }
+    body{background-color: #ECEFF1;}
+    .tabed .active  a{
+        color: blue;
+    }
+    
+
+    
+</style>
+
+<body>
+    
+    <div class="container-fluid">
+        <nav>
+            <div class="nav nav-tabs row " id="nav-tab" role="tablist">
+                <a class="nav-link active col-4 text-center" id="sent-tab" data-bs-toggle="tab" data-bs-target="#sent" role="tab">Sent</a>
+                <a class="nav-link col-4 text-center" id="accepted_tab" data-bs-toggle="tab" data-bs-target="#accepted" role="tab">Accepted</a>
+                <a class="nav-link col-4 text-center" id="rejected-tab" data-bs-toggle="tab" data-bs-target="#rejected" role="tab">Completed</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="sent" role="tabpanel" aria-labelledby="job-tab">{% include 'Sent_job_card.html' %}</div>
+        <div class="tab-pane fade" id="accepted" role="tabpanel" aria-labelledby="accepted-tab">{% include 'Accepted_job_card.html' %}</div>
+        <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">{% include 'complete_job_card.html' %}</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+</body>
+</html>
+{% include 'worker_bottom_nav.html' %}

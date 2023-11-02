@@ -1,0 +1,185 @@
+<!-- Included from added_work.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="static/bootstrap.css "> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+     :root {
+        --black: #545454;
+        --blue: #303F9F;
+        --light-blue: #4756b5;
+        --aliceblue: #F0F8FF;
+        --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "poppins";
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: 600;
+    }
+    
+    .applicant_info img {
+        height: 4rem;
+        min-height: 4rem;
+        max-height: 4rem;
+        width: 4rem;
+        min-width: 4rem;
+        max-width: 4rem;
+        object-fit: cover;
+        background: #ECEFF1;
+        margin: 5px;  }
+    
+    .applicant_info {
+        font-size: .8rem;
+    }
+    
+    .applicant_info  a {
+        
+        text-decoration: none;
+        
+    }
+    .applicant_info .link a {
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--blue);
+    }
+    
+    .applicant_info .link a:hover {
+        color: var(--light-blue);
+    }
+    
+    .applicant_info i {
+        font-size: 1rem;
+        border: solid 1px --black;
+    }
+    
+    .applicant_info .fa-star {
+        font-size: 0.6rem;
+    }
+    
+    .contents{
+        color: #212529;
+    }
+    .checked {
+        color: #ffe345;
+    }
+    .green-color {
+        color:green;
+    }
+</style>
+
+<body>
+    <div class="container-fluid d-flex flex-column applicant_info " style="background-color: #ECEFF1; height:100vh; overflow: scroll;">
+        {% if searches != () %}
+
+        <h5 class="my-1" style="color: var(--black);">Applied Applicants</h5>
+        {% for search in searches %} {% if search[7] == 2 %}
+        <div class="container card d-flex flex-row justify-content-between align-items-start my-2 shadow w-100" id="{{search[4]}}">
+            <div class="d-flex flex-row justify-content-start align-items-start py-2 w-100">
+                {% if searchj[5] != "1" %}
+                {% set fname = 'worker/' + search[4] + '/' + 'profile-' + search[4] + '.webp' %}
+                <img class=""  src=" {{ url_for ('static',filename=fname) }} "> </img>
+                {% endif %}
+                {% if search[5] == "1" %}
+                {% set fname = 'images/profile.webp' %}
+                <img class=""  src=" {{ url_for ('static',filename=fname) }} "> </img>
+                {% endif %}
+                <div class=" ms-2 mt-1 text-wrap contents">
+                    <div style="font-weight: 400;">{{search[1]}}</div>
+                    {% if search[7]==1 %}
+                    <span style="font-size: 15px" class="material-icons green-color">verified </span>
+                    {% endif %}
+                    <div style="font-weight: 500;">{{search[0]}}</div>
+                    <div>{% for star in range(0,search[6]) %}
+                        <i class="fa fa-star checked"></i> {% endfor %} {% for star in range(0,(5 - search[6])) %}
+                        <i class="far fa-star" style="color: var(--black);"></i> {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="pt-3 pe-md-2 ">
+            <div class="text-wrap mb-2 text-center ">
+            
+            </div>
+            <div class=" d-flex text-wrap w-100 link">
+                <a href="/answer/work/{{search[8]}}/0/{{rec_id}}/{{works[8]}}" class="btnn bg-transparent border-0">Accept</a>&nbsp;|&nbsp;
+                <a href="/answer/work/{{search[8]}}/1/{{rec_id}}/{{works[8]}}" class="btnn bg-transparent border-0">Reject</a>
+            </div>
+        </div>
+
+        </div>
+        <script>
+            
+            document.getElementById("{{search[4]}}").addEventListener('click', worker_profile);
+
+            function worker_profile() {
+                window.location.href = '/worker/profile/public/{{rec_id}}/{{now}}/{{search[4]}}';
+            }
+       
+        
+        </script>
+        {% endif %} {% endfor %}{% endif %}
+<br>
+<br>
+<br>
+    {% if searches != () %}
+    <h5 class="my-1" style="color: var(--black);">Accepted Applicants</h5>
+    {% for search in searches %} {% if search[7] == 0 %}
+
+    <div class="container-fluid card d-flex flex-row justify-content-between align-items-start my-2 shadow " id="{{search[4]}}">
+        <div class="d-flex flex-row justify-content-start align-items-start py-2 w-100">
+            {% set fname = 'worker/' + search[4] + '/' + 'profile-' + search[4] + '.webp' %}
+            <img class="" src=" {{ url_for ('static',filename=fname) }} ">></img>
+            <div class=" ms-2 mt-1 text-wrap contents">
+                <div style="font-weight: 400;">{{search[1]}}</div>
+                <div style="font-weight: 500;">{{search[0]}}</div>
+                <div>{% for star in range(0,search[6]) %}
+                    <i class="fa fa-star checked"></i> {% endfor %} {% for star in range(0,(5 - search[6])) %}
+                    <i class="far fa-star" style="color: var(--black);"></i>{% endfor %} </div>
+            </div>
+        </div>
+    <div class=" text-nowrap ms-1 mt-3 link ">
+        <a  class="btnn border-0 " id="{{search[4]}}">View</a>&nbsp;|&nbsp; 
+        <a href="/answer/work/{{search[8]}}/1/{{rec_id}}/{{works[8]}}" class="btnn border-0">Reject</a>
+    </div>
+    </div>
+    <script>
+            
+        document.getElementById("{{search[4]}}").addEventListener('click', worker_profile);
+
+        function worker_profile() {
+            window.location.href = '/worker/profile/public/{{rec_id}}/{{now}}/{{search[4]}}';
+        }
+   
+    
+    </script>
+    {% endif %} {% endfor %}{% endif %} 
+    <br>
+    </div>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+	<title>Navbar</title>
+
+	<style>
+	 :root {
+  --black: #545454;
+  --blue: #303F9F;
+  --light-blue:#4756b5;
+  --aliceblue: #F0F8FF;
+  --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: "poppins";
+    text-decoration: none;
+    }
+
+    h1,h2,h3,h4,h5{
+    font-weight: 600;
+    }
+
+    .btn-primary{
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 3px 10px;
+    color: #fff;
+    background-color: var(--blue);
+    }
+
+    .btn-primary:hover{
+    color: var(--aliceblue);
+    background-color: var(--light-blue);
+    transform: scale(1.01);
+    }
+
+		.main {
+			width: 65%;
+			margin: 0px auto;
+		}
+
+		.form-control {
+			background-color: #f8f9fa !important;
+		}
+
+		.icon-light {
+			color: light;
+			
+		}
+
+		.navbar-toggler {
+			border: 0px solid transparent;
+		}
+
+		.navbar-toggler-icon {
+			width: 1.3em;
+			height: 1.3em;
+		}
+
+		
+		.search-container {
+			width: 65%;
+ 		 	box-sizing: border-box;
+ 			display: flex;
+ 			flex-direction: column;
+  		    justify-content: center;
+ 		    align-items: center;
+		}
+
+		.searchInputWrapper {
+			width: 100%;
+  			position: relative;
+		}
+
+		.searchInput {
+  			width: 100%;
+  			height: 2rem;
+  			padding: 0 1rem; 
+ 			border-radius: 2rem;
+  			border: none;
+  			transition: transform 0.1s ease-in-out;
+		}
+
+		.searchInput::placeholder {
+  			color: #a1a1a1;
+		}
+
+/* hide the placeholder text on focus */
+		.searchInput:focus::placeholder {
+ 			 text-indent: -999px
+				}
+
+		.searchInput:focus {
+ 			outline: none;
+			transform: scale(1.1);
+  			transition: all 0.1s ease-in-out;
+			}
+
+			.searchInputIcon {
+  			position: absolute;
+  			right: 0.8rem;
+  			top: 0.5rem;
+  			color: #a1a1a1;
+  			transition: all 0.1s ease-in-out;
+			}
+
+			.search-container:focus-within > 
+			.searchInputWrapper > .searchInputIcon {
+  			right: 0.2rem;
+			}
+
+		@media screen and (min-width:900px) {
+			.searchInput {
+  			height: 2rem;
+  			padding: 0 1rem; 
+ 			border-radius: 2rem;
+  			border: none;
+  			transition: transform 0.1s ease-in-out;
+		}
+		}
+
+		.colr {
+			color: black;
+		}
+		
+		.prop {
+			display: inline-block;
+		}
+
+		.filter {
+			background-color: rgb(230, 216, 216);
+			width: 180px;
+			float: left;
+			position: absolute;
+			right: 15px;
+			padding: 15px;
+			padding-top: 30px;
+			border-radius: 15px;
+
+
+		}
+
+		#text {
+			background-color: rgb(230, 216, 216);
+			border: none;
+			color: black;
+			text-align: center;
+			width: 100%;
+		}
+
+		#text:not([type="text"]) {
+			border: none;
+		}
+
+		.apply {
+			display: flex;
+			align-items: center;
+
+			border-radius: 15px;
+			justify-content: center;
+
+		}
+
+		.apply2 {
+
+			height: 30px;
+			border-radius: 15px;
+			display: flex;
+			align-items: center;
+
+
+		}
+
+		.pos3 {
+			position: absolute;
+			top: 8px;
+			right: 11px;
+		}
+
+		@media screen and (min-width:600px) {
+			.pos3 {
+				position: absolute;
+				top: 8px;
+				right: 20px;
+			}
+		}
+
+		.pos2 {
+			position: absolute;
+			right: 8px
+		}
+		.fa{
+			color: var(--black);
+			font-size: 1rem;
+		}
+		.fa-filter{
+			font-size: .9rem;
+		}
+		.side-nav{
+            border-top: 2px var(--box-shadow) solid ;
+            border-right: 2px var(--box-shadow) solid ;
+        }
+        .side-nav-item{
+            border-bottom: 1px #ECEFF1 solid;
+        }
+        .side-nav-item a{
+            font-size: .9rem;
+            font-weight: 600;
+            font-family: "poppins";
+            color: var(--black);
+        }
+        .side-nav-item a:hover{
+            color: var(--blue);
+                }
+        
+		.spacer{
+			width: 100%;
+			height:50px;
+		}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<nav class="container-fluid navbar fixed-top expand-lg d-flex flex-row  justify-content-between align-items-center border-bottom " style="background-color: #fff;" >
+	
+		<div class="" id='bar1'>
+			<div class="" id="bar">
+				<i class="fa fa-bars bar"></i>
+			</div>
+
+			<div class="" id="cross">
+				<i class="fa fa-times times"></i>
+			</div>
+		</div>
+		{% if data %}
+        <div class="search-container ">
+            <div class="searchInputWrapper ">
+                <input class="searchInput shadow-sm" id="search" name="search_value" type="search" placeholder='Search' value="{{data[0]}}">
+                <i  id="oonclick" class="searchInputIcon fa fa-times"></i>
+                </input>
+            </div>
+        </div>
+        {% else %}
+        <div class="search-container ">
+            <div class="searchInputWrapper ">
+                <input class="searchInput shadow-sm" id="search" name="search_value" type="search" placeholder='Search'>
+                <i onclick="search()" class="searchInputIcon fa fa-search"></i>
+                </input>
+            </div>
+        </div>
+        {% endif %}
+	
+		<div class="me-2" style="cursor: pointer;">
+			<div class=" " id="first1">
+		    	<i class="fa fa-filter icon-light "></i>
+			</div>
+			 <div class="" id="second1">
+	      		<svg id="second1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel " viewBox="0 0 16 16">
+		   	      <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+		  		</svg>
+		   </div>
+		</div>
+	</nav>
+
+	<div id="lownav" class=""  style="background-color: white; position: absolute; top: 48px; z-index: 5;">
+
+
+		<!-- <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="">about</a></div>
+		
+		<div class="my-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="">about</a></div>
+		
+		<div class="my-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="">about</a></div>
+		
+		<div class="my-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="">about</a></div> -->
+		
+
+
+	</div>
+
+	<div id="filter1" style="cursor: pointer; z-index: 5;">
+		<!-- <div class="filter">
+			<div><h3 style="font-size: smaller;">Catagory</h3></div>
+			<input type="text" name="" id="text" placeholder="Type here" style="font-size: smaller;">
+			<hr class="hr" style="margin: 0%;">
+			
+			<div class="my-2"><h3 style="font-size: smaller;">Working hours</h3></div>
+			<input type="text" name="" id="text" placeholder="Type here" style="font-size: smaller;">
+			<hr class="hr" style="margin: 0%;">
+			
+			<h6 class="my-3 "  style="font-size: smaller;  ">Part Time <input type="checkbox" id="vehicle1" class="pos2" name="vehicle1" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">Full Time<input type="checkbox" id="vehicle1" class="pos2" name="vehicle1" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">For Men<input type="checkbox" class="pos2" id="vehicle1" name="vehicle1" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">For Women <input type="checkbox" id="vehicle1" name="vehicle1" class="pos2" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">Divyangsp;<input type="checkbox" class="pos2" id="vehicle1" name="vehicle1" value="Bike"></h6>
+
+			<div class="col-12 apply" >
+				<button type="submit" class="btn btn-primary apply2" >Sign in</button>
+			  </div>
+			
+	</div> -->
+	</div>
+	<div class="spacer">
+		&nbsp;
+	</div>
+
+	<script >
+		function search(){
+			var search_key = document.querySelector("input").value;
+			console.log(search_key)
+			window.location.href = "/worker/search_sort/" + search_key;
+		}
+		var input = document.getElementById("search");
+        // Execute a function when the user releases a key on the keyboard
+        input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        search();}});
+		let cross=document.getElementById('cross');
+		cross.style.display='none';
+
+		let bar=document.getElementById('bar');
+		let lownav=document.getElementById('lownav');
+		bar.addEventListener("click",function(){
+			filter1.innerHTML=``
+			
+			lownav.innerHTML=` 
+			<div class=" d-flex flex-column justify-content-start pt-2 shadow-lg  side-nav " style=" height: 100vh; width: 33vh; position: fixed ; background-color:#fff">
+			<div class="py-2   side-nav-item" ><a href="/worker/dashboard" style="color: black; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-home home"></i></span> &nbsp;Home</a></div>
+				
+			<div class="py-2 side-nav-item"><a href="/worker/apply/details" style="color: black; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-briefcase briefcase"></i></span> &nbsp;My Applies</a></div>
+			
+			<div class="py-2 side-nav-item" ><a href="/notification" style="color: black; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp; <span><i class="fa fa-bell bell"></i></span> &nbsp;Notification</a></div>
+			
+			<div class="py-2 side-nav-item"><a href="/worker/profile" style="color: black; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-user user"></i></span>  &nbsp;&nbsp;Account</a></div>
+			<div class="py-2 mt-2 side-nav-item"><a href="/help_support" style="color: black; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-comment"></i></span>  &nbsp;&nbsp;Help & Support</a></div>
+			<div class="py-2 mt-2 side-nav-item"><a href="/logout" style="color: black; text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-power-off"></i></span>  &nbsp;&nbsp;Logout</a></div>
+			</div> `
+			
+			if (cross.style.display=='none') {
+				cross.style.display='block'
+				bar.style.display='none';
+			}
+			else{
+				cross.style.display='none'
+				bar.style.display='block';
+			}
+			
+		});
+
+		cross.addEventListener("click",function(){
+			lownav.innerHTML=``
+
+			if (cross.style.display=='none') {
+				cross.style.display='block'
+				bar.style.display='none';
+			}
+			else{
+				cross.style.display='none'
+				bar.style.display='block';
+			}
+			
+		});
+
+
+		let filter1=document.getElementById("filter1");
+
+		console.log(filter1);
+
+
+
+		// select filter icon
+
+		let first=document.getElementById("first1");
+		let second=document.getElementById("second1");
+
+		second.style.display="none";
+
+		console.log(first);
+		console.log(second);
+
+		first.addEventListener("click",function(){
+			console.log('we are bar');
+			lownav.innerHTML=``
+			filter1.innerHTML=`<div class="filter" style="cursor: pointer;">
+			<div><h3 style="font-size: smaller;">Catagory</h3></div>
+			<input type="text" name="" id="text" placeholder="Type here" style="font-size: smaller;">
+			<hr class="hr" style="margin: 0%;">
+			
+			<div class="my-2"><h3 style="font-size: smaller;">Working hours</h3></div>
+			<input type="text" name="" id="text" placeholder="Type here" style="font-size: smaller;">
+			<hr class="hr" style="margin: 0%;">
+			
+			<h6 class="my-3 "  style="font-size: smaller;  ">Part Time <input type="checkbox" id="vehicle1" class="pos2" name="vehicle1" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">Full Time<input type="checkbox" id="vehicle1" class="pos2" name="vehicle1" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">For Men<input type="checkbox" class="pos2" id="vehicle1" name="vehicle1" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">For Women <input type="checkbox" id="vehicle1" name="vehicle1" class="pos2" value="Bike"></h6>
+			<h6 class="my-3  " style="font-size: smaller; ">Divyangsp;<input type="checkbox" class="pos2" id="vehicle1" name="vehicle1" value="Bike"></h6>
+
+			<div class="col-12 apply" >
+				<button type="submit" class="btn btn-primary apply2" >Sign in</button>
+			</div>
+			
+		</div>
+		`
+
+			if (second.style.display=='none') {
+				second.style.display='block'
+				first.style.display='none';
+			}
+			else{
+				second.style.display='none'
+				first.style.display='block';
+			}
+			
+		});
+
+		second.addEventListener("click",function(){
+			console.log('we are bar');
+			
+			filter1.innerHTML=``
+
+			if (second.style.display=='none') {
+				second.style.display='block'
+				first.style.display='none';
+			}
+			else{
+				second.style.display='none'
+				first.style.display='block';
+			}
+			
+		});
+		window.onclick = function (event) {
+            if (!event.target.matches('.fa-filter')) {
+
+                if (!event.target.matches('.filter')) {
+
+                    if (!event.target.matches('.inputtxt1')) {
+
+                        if (!event.target.matches('.a')) {
+
+                            if (!event.target.matches('.a')) {
+
+                                if (!event.target.matches('.pos2')) {
+
+                                    if (!event.target.matches('.c')) {
+                                        filter1.innerHTML = '';
+                                        
+
+                                        if (second.style.display == "block") {
+                                            second.style.display = 'none'
+                                            first.style.display = 'block';
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            if (!event.target.matches('.bar')) {
+
+                lownav.innerHTML = '';
+
+                if (cross.style.display == 'block') {
+                    cross.style.display = 'none'
+                    bar.style.display = 'block';
+                }
+            }
+
+        }
+
+        document.getElementById('search').addEventListener('click', function(){
+            console.log('hi my name is gaurav');
+            
+        })
+        document.getElementById('oonclick').addEventListener('click', function(){
+            console.log('hi my name is gaurav i am in crosssearch');
+            document.getElementById('search').innerText="hi";
+            document.getElementById('search').value="";
+            
+        })
+
+
+
+
+
+	</script>
+
+	<!-- {% block body %} {% endblock body %} -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+{% with messages = get_flashed_messages(with_categories=true) %}
+	<ul class="list-group" >
+		{% for category, message in messages %}
+		<li class="alert alert-{{category}} alert-dismissible fade show" >
+			{{ message }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</li>
+		{% endfor %}
+	</ul>
+	<script>
+		setTimeout(function() {
+    	$('.alert').fadeOut('fast');
+		}, 5000)
+	// element.classList.add("color");	
+	</script>
+{% endwith %}
+</html>

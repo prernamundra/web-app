@@ -1,0 +1,565 @@
+{% include 'all_nav.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Document</title>
+
+
+    <!-- Custom CSS -->
+    <style>
+        .rate-area {
+            float: left;
+            border-style: none;
+        }
+
+        .rate-area:not(:checked)>input {
+            position: absolute;
+            top: -9999px;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        .rate-area:not(:checked)>label {
+            float: right;
+            width: 0.8em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 180%;
+            color: lightgrey;
+        }
+
+        .rate-area:not(:checked)>label:before {
+            content: "★";
+        }
+
+        .rate-area>input:checked~label {
+            color: #ffe345;
+        }
+
+        .rate-area:not(:checked)>label:hover,
+        .rate-area:not(:checked)>label:hover~label {
+            color: #ffe345;
+        }
+
+        .rate-area>input:checked+label:hover,
+        .rate-area>input:checked+label:hover~label,
+        .rate-area>input:checked~label:hover,
+        .rate-area>input:checked~label:hover~label,
+        .rate-area>label:hover~input:checked~label {
+            color: #ffe345;
+        }
+
+        :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            font-family: "poppins";
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            font-size: 1rem;
+            border-radius: 4px;
+            padding: 3px 10px;
+            color: #fff;
+            background-color: var(--blue);
+        }
+
+        .btn-primary:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+
+
+        hr {
+            color: #E6E6E6;
+        }
+
+
+        .clearnot {
+            margin-bottom: 50px;
+            border-radius: 0;
+            color: var(--black);
+            background-color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 5px 2px 7px grey;
+        }
+
+        .notification-link {
+            margin: 2rem 0;
+        }
+
+        .notification {
+            font-size: .8rem;
+            color: #1A237E;
+            font-weight: 500;
+        }
+
+        @media all and (min-width:950px) {
+
+            .notification {
+                color: #1A237E;
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+        }
+
+        .notification-heading {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        @media all and (min-width:950px) {
+
+            .notification-heading {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+        }
+
+        .notification-btn {
+            width: 100%;
+            position: fixed;
+            bottom: 5%;
+            left: 0;
+            margin: 0;
+        }
+
+        .popup {
+
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+
+            position: absolute;
+            top: 20vh;
+            left: 0;
+            right: 0;
+            margin: auto;
+            max-width: 300px;
+            width: 90vw;
+            box-shadow: 10px 19px 11px grey;
+            border: 1px solid #4756b5;
+        }
+
+
+        .midstar {
+            position: relative;
+            left: 43px;
+            font-size: 25px;
+            top: -41px;
+        }
+
+        .text {
+            position: relative;
+            margin-left: 33px;
+            margin-right: 33px;
+            border: 2px solid #4756b5;
+        }
+
+        .submit1 {
+            position: relative;
+            left: 91px;
+            size: 10px;
+            width: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+
+
+        .rate-area:not(:checked)>label {
+            float: right;
+            width: 0.8em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 160%;
+            color: lightgrey;
+        }
+
+
+        .textarea5 {
+            position: relative;
+            left: 21px;
+            top: -40px;
+            right: -16px;
+            height: 46px;
+            width: 190px;
+            max-height: 41px;
+        }
+
+
+
+
+
+
+
+        .text {
+            position: relative;
+            margin-left: 33px;
+            margin-right: 33px;
+            border: 2px solid #4756b5;
+        }
+
+        .submit1 {
+            position: relative;
+            left: 91px;
+            size: 10px;
+            width: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .end {
+            position: relative;
+            top: 4px;
+            right: -267px;
+            font-size: 23px;
+            cursor: pointer;
+
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .fa-circle:before {
+            color: #303F9F;
+        }
+        #loading {
+            /* width: 35px;
+            height: 35px; */
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 45%;
+            /* background: url(/home/ubuntu/integration/app/static/ajax-loader.gif) no-repeat; */
+            cursor: wait;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pop Up -->
+    <div id="pooopup">
+        <form action="/rec/work/review/{{rec_id}}" method="POST">
+            <div class="popup popup5 grid" style="position: fixed;z-index:10; --bs-columns: 12;">
+                <div class="end" id="cross121"><i class="fas fa-times"></i></div>
+                <div class="cont">
+                    <h4 style="text-align: center; color: #303F9F;">Rate </h4>
+                    <h4 style="text-align: center; color: #303F9F;">Your Recruiter</h4>
+
+                    <br>
+                    <br>
+  
+                    <div class="midstar">
+                        <ul class="rate-area">
+                            <input type="radio" id="5-star" name="recruiter_review" value="5" /><label for="5-star"
+                                title="Amazing">5
+                                stars</label>
+                            <input type="radio" id="4-star" name="recruiter_review" value="4" /><label for="4-star"
+                                title="Good">4
+                                stars</label>
+                            <input type="radio" id="3-star" name="recruiter_review" value="3" /><label for="3-star"
+                                title="Average">3
+                                stars</label>
+                            <input type="radio" id="2-star" name="recruiter_review" value="2" /><label for="2-star"
+                                title="Not Good">2
+                                stars</label>
+                            <input type="radio" id="1-star" name="recruiter_review" value="1" /><label for="1-star"
+                                title="Bad">1
+                                star</label>
+                        </ul>
+                    </div>
+                    <br>
+
+                    <div class="text">
+                        <div style="height: 15px; width: 200px; text-align: center; justify-content: center; display: flex; position: relative;"
+                            , name="" id="">
+                            <textarea name="recruiter_review_message" id="" class="textarea5" cols="30" rows="10"
+                                placeholder="Say Something......"></textarea>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="submit1">
+                         
+                        <button type="submit"
+                            style="background-color: #4756b5; padding: 3px; border-radius: 5px; width: 95px;color: white;"><b>Submit</b></button>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- main contant -->
+    <div id="main2" style="z-index: 0;">
+        <div class="main">
+            <div class="container-fluid ">
+                <div class="d-grid gap-4 mx-2 p-2 pt-0">
+                    <button class="btn btn-primary" type="button"
+                        style="border-radius: 50px; margin-top: 25px;"><b>Greetings
+                            of the day</b></button>
+                </div>
+
+                <div id="loading"><image src="{{ url_for ('static',filename='ajax-loader.gif') }}"></div>
+                <div id="content" class="tab-content" id="nav-tabContent">
+    <div id="main5">
+                    {% if data == () %}
+                    {% include 'NoData.html' %}
+                    {% endif %}
+                    {% for d in data %}
+                    <div class="my-4">
+                        {% if d[6] != 0 %}
+                            {% if 'rate' in d[4] %}
+                            <div class="my-4 notclick">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <a style="text-decoration: none;">
+                                <div  class="notification" id="not">
+                                    <span class="notification-heading">{{d[4]}}</span>
+                                    <p  class="text-wrap mt-2">{{d[5]}}</p>
+                                </div>
+                                </a>
+                                
+                                <i class="fas fa-circle"></i>
+                            
+                            </div>
+                            </div>
+                            {% else %}
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <a style="text-decoration: none;" href="{{d[8]}}">
+                                <div  class="notification">
+                                    <span class="notification-heading">{{d[4]}}</span>
+                                    <p  class="text-wrap mt-2">{{d[5]}}</p>
+                                </div>
+                                </a>
+                                
+                                <i class="fas fa-circle"></i>
+                            
+                            </div>
+                            {% endif %}
+                        
+                       
+                        {% else %}
+                            {% if 'rate' in d[4] %}
+                            <div class="my-4 notclick">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <a style="text-decoration: none;">
+                                <div class="notification" id="not">
+                                    <span style="color: #383838;" class="notification-heading">{{d[4]}}</span>
+                                    <p style="color: #545454;" class="text-wrap mt-2">{{d[5]}}</p>
+                                </div>
+                                </a>
+                            
+                            
+                            </div>
+                            </div>
+                            {% else %}
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <a style="text-decoration: none;" href="{{d[8]}}">
+                                <div class="notification">
+                                    <span style="color: #383838;" class="notification-heading">{{d[4]}}</span>
+                                    <p style="color: #545454;" class="text-wrap mt-2">{{d[5]}}</p>
+                                </div>
+                                </a>
+                            
+                            
+                            </div>
+                            {% endif %}
+                        {% endif %}
+                        <hr>
+                    </div>
+                    {% endfor %}
+
+                    <!-- <div class="my-4 notclick">
+
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <div class="notification" id="not">
+                                <span class="notification-heading">Notification</span>
+                                <p class="text-wrap mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Perferendis eveniet iure eos sedodit neque.</p>
+                            </div>
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <hr>
+
+                    </div> -->
+                </div>
+
+                {% if "rec" in rec_id %}
+                <div class="notification-btn d-flex justify-content-center" id="mybttn">
+                    <a class="btn btn-primary clearnot" href="/delete/notification">&nbsp;&nbsp;&nbsp;&nbsp;Clear
+                        Notification&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                </div>
+                {% else %}
+                <div class="notification-btn d-flex justify-content-center" id="mybttn">
+                    <a class="btn btn-primary clearnot" href="/delete/notification">&nbsp;&nbsp;&nbsp;&nbsp;Clear
+                        Notification&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                </div>
+                {% endif %}
+
+            </div>
+            <br>
+        </div>
+    </div>
+</div>>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+    <script type="text/javascript">// <![CDATA[
+        $('a.load').click(function(event) {
+ // Remember the link href
+ var href = this.href;
+ // Don't follow the link
+ event.preventDefault();
+ // Do the async thing
+  loading();
+     // This is the completion callback for the asynchronous thing;
+     // go to the link
+     window.location = href;
+ });
+        function loading(){
+             $("#loading").show();
+             $("#content").hide();       
+         }
+     // ]]></script>
+</body>
+<script>
+
+    cross123 = document.getElementById("cross121");
+    popup = document.getElementById("pooopup");
+    let popup5 = document.getElementsByClassName("popup5");
+    mybttn = document.getElementById("mybttn");
+    console.log(document.getElementById("mybttn"));
+
+    console.log(popup5);
+
+    not = document.getElementById("not");
+    notclick = document.getElementsByClassName("notclick");
+    // main = document.getElementById("main5");
+    // main2 = document.getElementById("main2");
+
+
+    popup.style.display = "none";
+
+    console.log(notclick);
+
+    main.addEventListener("click", function () {
+
+
+        popup.style.display = "block"
+
+        main2.style.opacity = "0.09";
+
+        main.style.zIndex = "-1";
+        not.style.zIndex = "-1";
+
+    })
+
+
+    cross123.addEventListener("click", function () {
+        popup.style.display = "none";
+        main2.style.opacity = "1";
+    })
+
+
+    window.onclick = function (event) {
+        if (event.target.matches('.btn')) {
+            popup.style.display = "none";
+            main.style.opacity = "1";
+
+        }
+    }
+
+</script>
+{% if "rec" in rec_id %}
+{% include 'bottom_navbar.html' %}
+{% endif %}
+{% if "worker" in worker_id %}
+{% include 'worker_bottom_nav.html' %}
+{% endif %}
+</html>

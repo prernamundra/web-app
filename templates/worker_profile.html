@@ -1,0 +1,642 @@
+<!-- render through workerprofile.py -->
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.51/dist/themes/light.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Applican Profile</title>
+
+    <style>
+         :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            font-family: "poppins";
+            text-decoration: none;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 600;
+        }
+        
+        i {
+            font-size: 1rem;
+        }
+        
+        .pro-image {
+            width: 6.5rem;
+            max-width:6.5rem;
+            height: 6.5rem;
+            max-height: 6.5rem;
+            object-fit: cover;
+        }
+        
+        hr {
+            margin: 15px auto;
+            width: 15%;
+            color: rgb(238, 215, 215);
+            border: solid rgb(238, 215, 215) 3px;
+            border-radius: 10px;
+        }
+        
+        .btn-primary {
+            font-size: 1rem;
+            border-radius: 4px;
+            padding: 3px 10px;
+            color: #fff;
+            background-color: var(--blue);
+        }
+        
+        .btn-primary:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+        .info-btn {
+            font-size: .6rem;
+            border-radius: 20px;
+            padding: 0 5px;
+            background-color: rgb(238, 215, 215);
+            transition: none;
+        }
+        
+        .green-color {
+            color:green;
+        }
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 10px;
+        }
+        .work-image.img{
+            padding:0;
+            height:15rem ;
+            min-height: 15rem;
+            max-height: 15rem;
+            object-fit: cover;
+        }
+        .work-stat{
+            color: var(--blue); 
+            font-size: .8rem;
+        }
+        
+        #drawer-img {
+            border-radius: 4px;
+            background-color: #fff;
+            text-align: center;
+            object-fit:cover;
+            width: 100%;
+            height: 30vh;
+            max-height: 30vh;
+
+        }
+        
+        #drawer-img2 {
+            border-radius: 4px;
+            background-color: #fff;
+            text-align: center;
+            object-fit:cover;
+            width: 100%;
+            height: 30vh;
+            max-height: 30vh;
+
+        }
+        #drawer-img3 {
+            border-radius: 4px;
+            background-color: #fff;
+            text-align: center;
+            object-fit:cover;
+            width: 100%;
+            height: 30vh;
+            max-height: 30vh;
+
+        }
+        
+        .fa-user-plus {
+            font-size: .8rem;
+        }
+        .fa-star{
+            font-size: .8rem;
+        }
+        .img-desc {
+            display: inline-block;
+            background-color: #444;
+            height: 8px;
+            border-radius: 100px;
+            margin: 5px 0;
+            min-width: 100px;
+            opacity: .1;
+            animation: fading 1.5s infinite;
+        }
+        .names{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .profile-bg{
+            background-color:#fafafa;
+        }
+        .semi-strong{
+            font-weight: 600;
+            font-size: .9rem;
+            color:var(--black);
+        }
+        @keyframes fading {
+            0% {
+                opacity: .1;
+            }
+            50% {
+                opacity: .2;
+            }
+            100% {
+                opacity: .1;
+            }
+        }
+        #drawer2 textarea{
+            height: 6rem;
+        }
+       .drawer-img-container {
+       position: relative;
+    }
+    .tag {
+       float: right;
+       position: absolute;
+       right:0px;
+       top: 0px;
+       z-index: 1000;
+    }
+    .carousel-images {
+        background-color: #fff;
+        max-height: 15rem;
+        width: 100%;
+        min-height: 15rem;
+        object-fit: cover;
+    }
+    #addImageInput {display: none;}
+        
+        /*  Loader  */
+        #loading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 100;
+        }
+
+        #loading img{
+            position: absolute;
+            top: 30%;
+            left: 40%;
+        }
+
+        @media(max-width: 768px){
+            #loading{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            #loading img{
+                top: 45%;
+                left: 40%;
+                width: 100px;
+                height: 45px;
+            }
+        }
+        
+        /*     Profile strength     */ 
+        .container{
+            margin-right: 100px;
+            margin-top: 20px;
+        }
+        .multi-steps > li.is-active ~ li:before, .multi-steps > li.is-active:before {
+            content: counter(stepNum);
+        }
+        .multi-steps > li.is-active ~ li:after, .multi-steps > li.is-active:after {
+            background-color: #ededed;
+        }
+
+        .multi-steps {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+        .multi-steps > li {
+            counter-increment: stepNum;
+            text-align: center;
+            display: table-cell;
+            position: relative;
+            color: #545454;
+            font-weight: bold;
+        }
+        .multi-steps > li:before {
+            content: "1";
+            display: block;
+            margin: 0 auto 4px;
+            background-color: #fff;
+            width: 36px;
+            height: 36px;
+            line-height: 35px;
+            text-align: center;
+            font-weight: bold;
+            border-width: 3px;
+            border-style: solid;
+            border-color: #303F9F;
+            border-radius: 50%;
+        }
+        .multi-steps > li:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: #303F9F;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            z-index: -1;
+        }
+        .multi-steps > li:last-child:after {
+            display: none;
+        }
+        .multi-steps > li.is-active:before {
+            background-color: #fff;
+            border-color: #303F9F;
+        }
+        .multi-steps > li.is-active ~ li {
+            color: #808080;
+        }
+        .multi-steps > li.is-active ~ li:before {
+            background-color: #ededed;
+            border-color: #ededed;
+        }
+    </style>
+</head>
+
+<body onload="welcome()">
+    <div id="loading">
+        <img src="./static/ajax-loader.gif" alt="">
+    </div>
+
+    {% for profile in profiles %}
+    <div class="container-fluid p-0 pb-3 profile-bg " style="height: 100%;">
+        <div class="container-fluid card p-0 " style="background-color:#fff;"">
+            <div class="d-flex flex-row bd-highlight p-1 mb-1">
+                {% set fname = 'worker/' + worker_id + '/' + 'profile-' + worker_id + '.webp' %}
+                <div class="p-2 bd-highlight "><img class="pro-image" src=" {{ url_for ('static',filename=fname) }} " alt=""></i>
+                </div>
+                <div class="p-2 bd-highlight align-items-center">
+                    <div class="names">{{profile[2]}} 
+                        {% if profile[17]==1 %}
+                        <span style="font-size: 15px" class="material-icons green-color">verified </span>
+                        {% endif %} &nbsp;&nbsp;
+                        <a class="edit-icon " href="/edit/worker"> <i class="fas fa-edit " style="color: var(--black); font-size: 1rem; "></i>
+                        </a>
+
+                    </div>
+                    <div class="semi-strong"><b>{{profile[8]}}</b></div>
+                    <div class="d-flex justify-content-between">
+                        <p style="margin-bottom: 0; font-size: .8rem; font-weight: 600;">1000pts <button class="info-btn ">More info</button></p>
+                    </div>
+                    <div class="stars">
+                        {% for star in range(0,profile[7]) %}
+                        <i class="fas fa-star" style="color: #ffe345;"></i> {% endfor %} {% for star in range(0,(5 - profile[7])) %}
+                        <i class="far fa-star"></i> {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center border-top border-bottom py-2 work-stat">
+            <div class="p-2 bd-highlight text-center ">
+                <div>Work Done</div>
+                <h6 style="font-weight: 600;">{{totalWork}}</h6>
+            </div>
+            <div class="p-2 bd-highlight text-center">
+                <div>Profile View</div>
+                <h6 style="font-weight: 600;">{{count}}</h6>
+            </div>
+            <div class="p-2 bd-highlight text-center">
+                <div>Hiring Rate</div>
+                <h6 style="font-weight: 600;">{{hirring}}%</h6>
+            </div>
+        </div>
+
+
+
+
+     
+            <div class="container-fluid px-0 d-flex flex-column  justify-content-center align-items-center px-0  mx-auto" >
+            <div class="container-fluid py-3 px-0 text-md-center ">
+                <span><i class="fas fa-phone-alt px-3"></i></span> {{profile[3]}}
+            </div>
+
+            <div class="container-fluid text-md-center ">
+                <div class="semi-strong float-left">Profile Strength: Low</div>
+            </div>
+          <div class="container">
+            <ul class="list-unstyled multi-steps">
+              <li>Aadhar Verification</li>
+              <li class="is-active">Vaccinated</li>
+              <li>Professional</li>
+            </ul>
+         </div>
+            
+            <div class="text-end">
+                <a href="/verification"><button class="btn btn-primary my-3" type="button" style="background: var(--blue);">Apply For Verification</button></a>
+            </div>
+        </div>
+      
+
+
+        <div class="px-0 container-fluid">
+            <h5 class="p-3 ">Work Gallery</h5>
+           <!-- show only images in carousel -->
+            <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% if count1 != [] %}
+                    {% set fname = 'worker/' + worker_id + '/'+ 'gallery'+ '/' + count1[0] %}
+                  <div class="carousel-item active">
+                    <img src="{{ url_for ('static',filename=fname) }}" class="img-thumbnail w-100 carousel-images" alt="...">
+                  </div>
+                  {% endif %}
+                  {% if count1 != [] %}
+                  {% for i in count1[1:] %}
+                  {% set fname = 'worker/' + worker_id + '/'+ 'gallery' + '/' + i %}
+                  <div class="carousel-item">
+                    <img src="{{ url_for ('static',filename=fname) }}" class="img-thumbnail w-100 carousel-images" alt="...">
+                  </div>
+                  {% endfor %}
+                  {% endif %}
+                  <!-- <div class="carousel-item">
+                    <img src="/static/images/logo.webp" class="img-thumbnail w-100 carousel-images" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/static/images/logo.webp" class="img-thumbnail w-100 carousel-images" alt="...">
+                  </div> -->
+                
+                </div>
+              </div>
+            <div class="row row-cols-5 w-100 mx-auto">
+                <!-- show image in loop -->
+                {% for i in count1 %}
+                  {% set fname = 'worker/' + worker_id + '/'+ 'gallery' + '/' + i %}
+                <img src="{{ url_for ('static',filename=fname) }}" class="img-thumbnail work-image col " alt="... ">
+                {% endfor %}
+                <!-- <img src="/static/images/logo.webp " class="img-thumbnail work-image col " alt="... ">
+                <img src="/static/images/logo.webp " class="img-thumbnail work-image col " alt="... ">
+                <img src="/static/images/logo.webp " class="img-thumbnail work-image col " alt="... "> -->
+               <!-- if image is less than 5 show this -->
+                
+                <div class="img-thumbnail work-image col  d-flex flex-column justify-content-center align-items-center" >
+                    <sl-button id="addImageBtn" type="submit" size="small"  circle>
+                        <sl-icon  name="plus-lg"></sl-icon></sl-button>
+                    </div>
+            </div>
+            
+        </div>
+        {% if reviews != 0 %}
+        <div class="container my-3 ">
+            <h5>Reviews & Ratings</h5>
+            <div class=" card swiper mySwiper ">
+                <div class="my-auto swiper-wrapper " style="width: 10rem; ">
+                    {% for review in reviews %}
+                    <div class="my-md-3 swiper-slide card-body d-flex flex-row bd-highlight ">
+                        <div class="bd-highligh d-flex flex-row justify-content-center align-items-evenly my-3 ">
+                            <img src="2_new.webp " alt=" " style="width: 4rem; height: 4rem; " class="rounded mx-auto ">
+                            <div class="d-inline-flex flex-column text-justify mx-3 ">
+                                <h5 class="card-title ">{{review[0]}}</h5>
+                                <p class="card-text text-left " style="font-size: 1rem; ">{{review[2]}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+                <div class="swiper-button-next "></div>
+                <div class="swiper-button-prev "></div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+    <sl-drawer label="" placement="bottom" id= "drawer1" class="drawer-placement-bottom" no-header style="--size:70vh; --header-spacing:0; --body-spacing:0;">
+       
+        <div class="container-fluid my-3 ">
+            <!-- set src using js -->
+            <div class="drawer-img-container">
+                <sl-dropdown class="tag"> 
+                    <sl-button type="default" size="small"  slot="trigger" caret><sl-icon name="gear"></sl-icon></sl-button>
+                    <sl-menu>
+                    <sl-menu-item ><div id="editImageBtn">Edit</div></sl-menu-item>
+                    <a id = "remove-image" style="text-decoration: none; color: #545454;" href="/del/image/{fname}"><sl-menu-item>Remove</sl-menu-item></a>
+                    </sl-menu>
+                    </sl-dropdown>
+                    
+            <img alt="" id="drawer-img" src="#">
+            </div>
+
+            <div class="d-inline-flex flex-column text-justify my-3 ">
+
+                <h5>Description</h5>
+
+                    <P id="drawer-imgdesc" class="regex-desc" >{{count1[0]}}</P>
+            </div>
+        </div>
+    </sl-drawer>
+    <sl-button style="display: none;">Open Drawer</sl-button>
+    <sl-drawer id="drawer2" label="" placement="bottom" class="drawer-placement-bottom" no-header style="--size:65vh; --header-spacing:0; --body-spacing:0;">
+        <div class="container-fluid my-1 ">
+            <h5 class="mx-2 mt-2">Enter Image Description</h5>
+            <img class="img-thumbnail mb-2"alt="" id="drawer-img2" src="#">
+        <form action="/worker/image/upload/{{worker_id}}"  method="POST" enctype="multipart/form-data">
+            <input id="addImageInput" name="image[]" type="file" accept="image/png,image/jpg,image/jpeg,image/*" placeholder="Photo">   
+            <textarea class="form-control mb-2"  placeholder="Enter Image Description" name="desc" id="ImageDescInput"></textarea>
+       <button class= "btn btn-primary w-100" type="submit">Submit</button> 
+        </form></div>
+    </sl-drawer>
+   
+    <!-- UPDATE THE DATA FROM BACKEND IN DRAWER 3 INPUT ( THE USER WILL BE PROMPT TO CHANGE THE IMAGE AND THEN USER CAN EDIT THE DESCRIPTION) -->
+    <sl-drawer id="drawer3" label="" placement="bottom" class="drawer-placement-bottom" no-header style="--size:65vh; --header-spacing:0; --body-spacing:0;">
+        <div class="container-fluid my-1 ">
+            <h5 class="mx-2 mt-2">Enter Image Description</h5>
+            <img class="img-thumbnail mb-2" alt="" id="drawer-img3" src="#">
+        <form id="EditImage" action="/edit/description/{fname}"  method="POST" enctype="multipart/form-data">
+
+            <textarea class="form-control mb-2"  name="desc" id="ImageDescEdit"></textarea>
+       <button class= "btn btn-primary w-100" value="submit" type="submit">Submit</button>
+        </form></div>
+    </sl-drawer>
+<!--    Loader    -->
+        <script>
+            var preloader = document.getElementById('loading');
+            function welcome(){
+                preloader.style.display = 'none';
+            }
+        </script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+<script>
+  function regexContent(content) {
+  var rx = /(.*)\.[^.]+$/;
+  content = decodeURIComponent(content);
+  var a = rx.exec(content);
+  var result = a[1].substring(a[1].lastIndexOf("-") + 1);
+  result = result.substring(1);
+  return result.replaceAll("|"," ");
+}
+
+   let imageInput= document.querySelector("#addImageInput");
+   let addImageButton = document.querySelector("#addImageBtn");
+   const drawer = document.querySelector('#drawer1');
+   const drawer2 =document.querySelector('#drawer2');
+   const drawer3 =document.querySelector('#drawer3');
+
+    const openButton = drawer.nextElementSibling;
+    const closeButton = drawer.querySelector('sl-button[type="primary"]');
+   addImageButton.addEventListener('click',function(){
+    imageInput.click();
+   });
+   
+   let editBtn = document.querySelector("#editImageBtn");
+    editBtn.addEventListener('click',function(){
+        drawer2.hide();
+        var rx = /(.*)\.[^.]+$/;
+        content = decodeURIComponent("/static/worker/worker-1e614659-1a27-11ec-afba-842afdcd3e16/gallery/worker-1e614659-1a27-11ec-afba-842afdcd3e16-1%7CRs%7C200.webp");
+        var a = rx.exec(document.querySelector('#drawer-img').attributes.src.value);
+        var ret = a[0].replace(/.*gallery\//,'');
+        
+        document.getElementById("drawer-img3").attributes.src.value = document.querySelector('#drawer-img').attributes.src.value;
+        document.getElementById("ImageDescEdit").value = document.getElementById("drawer-imgdesc").textContent;
+        document.getElementById("ImageDescEdit").value = document.getElementById("drawer-imgdesc").textContent;
+        document.getElementById("EditImage").action = decodeURIComponent("/edit/description/"+ret);
+        drawer3.show();
+      
+    });
+      
+       $("#addImageInput").change(function(){
+        if ( this.files && this.files[0] ){
+              $('#drawer-img2').attr('src', 
+            window.URL.createObjectURL(this.files[0]) );
+            }
+            
+         drawer2.show();
+             });
+    Array.from(document.querySelectorAll(".work-image")).forEach(function(element) {
+        element.addEventListener('click', function() {
+            let imageSource= element.attributes.src.value;
+            
+            console.log(imageSource);
+            showInDrawer(imageSource);
+            openButton.click();
+        });
+    });
+    Array.from(document.querySelectorAll(".carousel-images")).forEach(function(element) {
+    element.addEventListener('click', function(){   let imageSource= element.attributes.src.value;
+           
+           console.log(imageSource);
+           showInDrawer(imageSource);
+           openButton.click();
+       });
+   });
+    function showInDrawer(imageSource){
+        document.querySelector('#drawer-img').attributes.src.value = imageSource;
+        document.querySelector('#drawer-imgdesc').textContent = regexContent(imageSource);
+        let rgx = /(.*)\.[^.]+$/;
+        let x = rgx.exec(imageSource);
+        let result = x[0].substring(x[0].lastIndexOf("/") + 1);
+        let id =  result.substring(0,result.lastIndexOf("-"));
+        console.log(id);
+        console.log(`/del/image/${result}`);
+        document.querySelector('#remove-image').href = `/del/image/${result}`;
+        document.getElementById('EditImage').action="/edit/description/{result}";
+        // document.querySelector('EditImage').action = `/edit/description/${id}/${result}`;
+    }
+    openButton.addEventListener('click', () => drawer.show());
+    closeButton.addEventListener('click', () => drawer.hide());
+    drawer.addEventListener('sl-initial-focus', event => {
+        event.preventDefault();
+        input.focus({
+            preventScroll: true
+        });
+    });
+    
+</script>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.51/dist/shoelace.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+{% include 'worker_bottom_nav.html' %}
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<style>
+     :root {
+        --black: #545454;
+        --blue: #303F9F;
+        --light-blue: #4756b5;
+        --aliceblue: #F0F8FF;
+        --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none ;
+        font-family: "poppins";
+        text-decoration: none;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: 600;
+    }
+    
+    .btn-primary {
+        font-size: 1rem;
+        border-radius: 4px;
+        padding: 3px 10px;
+        color: #fff;
+        background-color: var(--blue);
+    }
+    
+    .btn-primary:hover {
+        color: var(--aliceblue);
+        background-color: var(--light-blue);
+        transform: scale(1.01);
+    }
+    
+    .information p {
+        font-size: .9rem;
+        margin-bottom: .3rem;
+        padding: 0;
+    }
+    
+    .box {
+        height: 4rem;
+        min-height: 4rem;
+        max-height: 4rem;
+        width: 4rem;
+        min-width: 4rem;
+        max-width: 4rem;
+        object-fit: cover;
+        background: #ECEFF1;
+        margin: 5px;
+    }
+    .job-title{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #545454;
+    }
+    .txt {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .detail-head{
+        color: var(--black);
+        font-size: 1.1rem;
+        font-weight: 600;
+
+    }
+    .label {
+        color: rgb(143, 136, 136);
+    }
+    
+    .details img{
+        background-color: #ECEFF1;
+        height: 15%;
+        max-height: 15rem;
+        width: 100%;
+        min-height: 15rem;
+        object-fit: cover;
+    }
+    
+    .apply-btn {
+        background-color: rgb(57, 57, 107);
+        width: 100px;
+
+    }
+    @media only screen and (min-width:600px) {
+        .details img{
+            object-fit: fill;
+        }
+    } 
+    @media only screen and (max-width:800px) {
+        .txt {
+            color: var(--black);
+            font-size: 1rem;
+        }
+        
+        
+    }
+    #map{
+        height: 18rem;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container-fluid px-0 " style="height: 100vh; margin-bottom: 50px; overflow: scroll;">
+        <!-- <h3 class="text-center md-2">Job Detail</h3> -->
+
+        <div class="d-flex justify-content-start align-items-start m-3">
+            {% set fname = 'recruiter/' + rec_id + '/' + 'Addwork/' + works[8] + '/' +  works[8] + '-1' +'.webp' %}
+           <img class="box w-100" src=" {{ url_for ('static',filename=fname) }} ">
+            <div class="job-title mx-3 my-4 ">{{works[9]}}</div>
+        </div>
+        <div class="information m-3">
+            <p><span class="label"><i class="bi bi-geo-alt"></i> Description : </span><span> {{works[1]}}</span></p>
+            <p><span class="label"><i class="bi bi-geo-alt"></i> Address : </span><span> {{works[3]}}</span></p>
+            <p><span class="label"><i class="bi bi-cash-coin"></i> Budget :  </span><span> {{works[4]}}</span></p>
+            <p><span class="label"><i class="bi bi-stopwatch"></i> Duration :  </span><span> {{works[5]}}</span></p>
+            <p><span class="label"><i class="bi bi-people"></i> Require :  </span><span> {{works[6]}}</span></p>
+            <p><span class="label"><i class="bi bi-calendar-check"></i> Date :  </span> <span class="text-wrap">{{works[7]}}</span></p>
+        </div>
+        <div class="details w-100 ">
+            <div class="detail-head mx-2">Details</div>
+                <div id="carouselExampleControls" class="carousel slide w-100" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100">
+                        {% if count != [] %}
+                        {% set fname = 'recruiter/' + rec_id + '/' + 'Addwork/' + works[8] + '/' + count[0] %}
+                        <div class="carousel-item active w-100">
+                            <img class=" w-100" src=" {{ url_for ('static',filename=fname) }} ">
+                        </div>
+                        {% endif %}
+                        {% if count != [] %}
+                        {% for i in count[1:] %}
+                    {% set fname = 'recruiter/' + rec_id + '/' + 'Addwork/' + works[8] + '/' + i %}
+                        <div class="carousel-item w-100">
+                            <img class="w-100" src=" {{ url_for ('static',filename=fname) }} ">
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              
+               </div>
+                
+            
+              
+            <div class="container-fluid mt-2" id="map">
+            </div>
+            {% set location1 = works[10].split(',')[0] %}
+            {% set location2 = works[10].split(',')[1] %}
+            <script>
+                function initMap() {
+                    const myLatLng = { lat: {{location1}}, lng: {{location2}} };
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: myLatLng,
+                    });
+            
+                    let marker =  new google.maps.Marker({
+                    position: myLatLng, 
+                    map,
+                    title: "Work Location",
+                    });  
+                    marker.addListener("click", () => {
+                       window.open("https://maps.google.com/?q=" + myLatLng.lat + ","+ myLatLng.lng);  });
+                }
+             </script>
+             <script
+             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi7MuwnyefX9ECu2c3igYWTw-MQoQHAzE&callback=initMap&libraries=&v=weekly"
+             async
+             ></script>
+        </div>
+    </body>         
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</html>

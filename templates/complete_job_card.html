@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Rejected</title>
+    <style>
+         :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            font-family: "poppins";
+            text-decoration: none;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 600;
+        }
+        
+        .btnx{
+            width: 65px;
+            font-size: 1rem;
+            border-radius: 4px;
+            
+        }
+        .primary {
+            color: #fff;
+            background-color: var(--blue);
+        }
+        .secondary {
+            color: var(--black);
+            min-width: 75px;
+        }
+        
+        .btnx:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+        
+        .cardx-content {
+            font-weight: 500;
+            font-size: .8rem;
+        }
+        
+        .date {
+            color:var(--black);
+            font-weight: 600;
+            font-size: .7rem;
+        }
+        
+        .image {
+            min-width: 4rem;
+            max-width: 4rem;
+            min-height: 4rem;
+            max-height: 4rem;
+            border: none;
+            background: #ECEFF1;
+        }
+        
+        body {
+            background-color: #ECEFF1;
+        }
+        
+        .container {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid py-2" style="background-color:#ECEFF1; height:100vh;">
+
+    {% for search in searches %} {% if search[13] == "0" %}{% if search[10] == 0 %}
+
+    <div class="container d-flex flex-row justify-content-between align-items-center rounded shadow py-2 my-2 mx-auto w-100">
+        <div class="d-flex bd-highlight flex-row align-items-center">
+            {% set fname = 'recruiter/' + search[11] + '/' + 'Addwork/' + search[9] + '/' +  search[9] + '-1' +'.webp' %}
+            <img class="image"  src=" {{ url_for ('static',filename=fname) }} ">
+            <div class="d-flex flex-column mx-2 justify-content-center cardx-content ">
+                <span>{{search[8]}}</span>
+                <span class="date" >Date & Time</span>
+                <span style="font-size: .6rem;">{{search[7]}}</span>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between align-items-center h-100 ">
+            <a href="/worker/work/detail/{{search[9]}}/{{worker_id}}"><button class="btnx primary ">View</button></a>
+            <!-- <a href="/cancel/apply/request/{{search[9]}}/{{search[11]}}/{{search[12]}}"><button class="btnx secondary my-2">Remove</button></a></div>    -->
+        </div>
+    </div>
+        {% endif %} {% endif %} {% endfor %}
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+</head>
+<style>
+	div#loading {
+    width: 35px;
+    height: 35px;
+    display: none;
+    background: url(/static/loadingimage.gif) no-repeat;
+    cursor: wait;
+    }
+</style>
+<body>
+    <div id="loading"></div>
+    <div id="content">
+        <h3>Type anything:</h3>
+        <p>
+        <form action="." method="POST">
+            <input type="text" name="anything" placeholder="Type anything here">
+            <input type="submit" name="anything_submit" value="Submit" onclick="loading();">
+        </form>
+        </p>
+    </div>    
+</body>
+
+<script type="text/javascript">// <![CDATA[
+	function loading(){
+		$("#loading").show();
+		$("#content").hide();       
+	}
+// ]]></script>
+ </html>

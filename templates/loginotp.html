@@ -1,0 +1,199 @@
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<style>
+:root {
+    --black: #545454;
+    --blue: #303F9F;
+    --light-blue:#4756b5;
+    --aliceblue: #F0F8FF;
+    --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: "poppins";
+    text-decoration: none;
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: 600;
+}
+
+    img{
+        margin: 50px 0 20px 0;
+        max-width: 200px;
+        min-width: 100px;
+        width:40%;     
+        } 
+    form{
+        width: 100%;
+        margin: auto;
+        margin-top:15%;
+    }    
+   .input{
+     text-align: left;
+     padding: 10px;
+     width: 100%;
+     
+    }
+    .btn{
+        background-color:rgb(57, 57, 107) ;
+        margin: auto;
+        margin-top: 5%;
+        color: white;
+        width: 100%;
+        min-width: 100px;
+        height: 3em;
+        max-height: 50px;
+    }
+    
+    .btn-primary{
+     font-size: 1rem;
+     border-radius: 4px;
+     padding: 3px 10px;
+     color: #fff;
+     background-color: var(--blue);
+        margin: auto;
+        margin-top: 2%;  
+        width: 100%;
+        min-width: 100px;
+        height: 3em;
+        max-height: 50px;
+    }
+
+    .btn-primary:hover{
+    color: var(--aliceblue);
+    background-color: var(--light-blue);
+    transform: scale(1.01);
+    }  
+    .inputcontrol{
+        font-size: small;
+        font-weight: 300;
+        padding: 1em;
+        height: 3em;
+        border: solid 2px ;
+        border-radius: 5px;
+        text-align: left;
+    }
+    .container-fluid{
+        height: 50vh;
+    }
+    #resend-otp{
+        text-decoration: none;
+        color: #4756b5;
+    }
+    #loading {
+            /* width: 35px;
+            height: 35px; */
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 45%;
+            /* background: url(/home/ubuntu/integration/app/static/ajax-loader.gif) no-repeat; */
+            cursor: wait;
+        }
+   
+</style>
+<body>
+    <div class="container-fluid d-flex flex-column justify-content-around w-100 " style="height: 100vh;"  >
+        <div class="logo">
+            <img src="/static/images/Mobile-graphic.webp" class=" mx-auto " alt="..."/>
+            <h1 class="mx-50%">UpRevol</h1>
+        </div>
+    
+    
+       
+    {% if type=='recruiter' %}
+    <div id="loading"><image src="{{ url_for ('static',filename='ajax-loader.gif') }}"></div>
+        <div id="content">
+            <form id="form-otp" action="/login/rec" method="POST">
+                    <div class="input">    
+                        <label for="inputPhone">Phone</label>
+                        <div class="input-group  mb-3">
+                            <label class="input-group-text bg-light inputcontrol" for="inputPhone">+91</label>
+                    <input type="tel" value='{{phone}}' class="form-control inputcontrol" id="inputPhone" name="phone" placeholder="Enter phone number" minlength="10" maxlength="10" readonly></div>
+                        <label for="inputOTP">OTP</label>
+                        <input class="form-control inputcontrol" id="inputOTP" name="otp" placeholder="Enter OTP" >
+                        <div class="form-text text-end"> <span id="timer"> RESEND OTP IN <span id="countdowntimer">30 </span></span> <a id ="resend-otp" href="#" >RESEND OTP</a></div>
+                        <div id="login">
+                            <button id="loginbtn" onclick="loading();" type="submit" class="btn btn-primary buttoncontrol">Login</button>   
+                        </div>
+                    </div>  
+                </form>
+        </div>
+    {% elif type=='worker' %}
+    <div id="loading"><image src="{{ url_for ('static',filename='ajax-loader.gif') }}"></div>
+        <div id="content">
+                <form id="form-otp" action="/login/worker" method="POST">
+                    <div class="input">    
+                        <label for="inputPhone">Phone</label>
+                        <div class="input-group  mb-3">
+                            <label class="input-group-text bg-light inputcontrol" for="inputPhone">+91</label>
+                    <input type="tel" value='{{phone}}' class="form-control inputcontrol" id="inputPhone" name="phone" placeholder="Enter phone number" minlength="10" maxlength="10" readonly></div>
+                        <label for="inputPhone">OTP</label>
+                            <input class="form-control inputcontrol" id="inputOTP" name="otp" placeholder="Enter OTP" >
+                            <div class="form-text text-end"> <span id="timer"> RESEND OTP IN <span id="countdowntimer">30 </span></span> <a id ="resend-otp" href="#" >RESEND OTP</a></div>
+                            <div id="login">
+                                <button id="loginbtn" type="submit" onclick="loading();" class="btn btn-primary buttoncontrol">Login</button>   
+                            </div>
+                        </div>  
+                    </form>
+        </div>
+    {% endif %}
+    <br>
+    </div>
+    <!-- Java Script Code-->
+
+    <script type="text/javascript">// <![CDATA[
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();       
+        }
+    // ]]></script>
+
+    <script>
+    
+    let timertext = document.getElementById("timer");
+    let optlink = document.getElementById("resend-otp");
+    setTimer();
+    optlink.href="/send/otp/"+ "{{type}}" + "/"+ document.getElementById("inputPhone").value;
+    optlink.style.display="none";
+    optlink.addEventListener("click",function(e){
+        resetTimer();
+    });
+    function resetTimer(){
+        optlink.style.display="none";
+        setTimer();
+        
+    }
+    
+    function setTimer(){
+    var timeleft = 30;
+    timertext.style.display="";
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+    {timertext.style.display="none";
+    optlink.style.display="";
+    clearInterval(downloadTimer);}
+    },1000);}
+    </script>
+</body>
+</html>

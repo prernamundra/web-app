@@ -1,0 +1,195 @@
+<!-- render through viewsavelist.py -->
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+         :root {
+            --black: #545454;
+            --blue: #303F9F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: #ECEFF1;
+        }
+       
+        .worker .card{
+            padding: 0.5rem 0 0.4rem 0.5rem;
+        }
+
+        .green-color {
+            color:green;
+        }
+
+        .image {
+            object-fit: cover;
+            border-radius: 2px;
+            min-width: 4rem;
+            max-width: 4rem;
+            min-height: 4rem;
+            max-height: 4rem;
+            border: none;
+            background: #ECEFF1;
+            margin-right: 0.5rem;
+        }
+        
+        .worker h1{
+            font-weight: 600;
+            color: var(--black);
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .worker .p1,.worker .p2{
+            display: inline-block;
+            font-size: .8rem;
+            color: rgb(143,136,136);
+            line-height: 1.1;
+            font-weight: 500;
+        }
+        .worker .p1{
+            padding-right: 0.5rem;
+        }
+/* 
+        .worker .p2{
+            padding-right: 4.1rem;
+        } */
+
+        .worker  .fa-phone-alt{
+            background-color: #303F9F;
+            border-radius: 4px;
+            border-color: #303F9F;
+            padding: 0.5rem .8rem 0.5rem .8rem;
+            color: #fff;
+        }
+        .worker .status{
+            font-size: .7rem;
+            font-weight: 600;
+        }
+        .worker .fa-star {
+            font-size: 0.55rem;
+        }
+        .worker .name{
+            font-weight: 500;
+            font-size: .9rem;
+        }
+     
+        .worker .star{
+            letter-spacing:0;
+        }
+        .worker .btn-primary {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            border-radius: 4px;
+            border-color: #303F9F;
+            background-color: #303F9F;
+        }
+
+        .worker .btn-primary:hover {
+            color: var(--blue);
+            background-color: var(--white);
+            transform: scale(1.01);
+            text-decoration: none;
+            border: 1px solid #4756b5;
+        }
+        .worker .button a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class=" container-fluid worker p-2" style="background-color: #ECEFF1; height: 100vh; ">
+    {% for search in searches %}
+    
+    <div class="card rounded shadow my-3 p-2" id="{{search[4]}}">
+        <div class="d-flex  w-100">
+            {% set fname = 'worker/' + search[4] + '/' + 'profile-' + search[4] + '.webp' %}
+            <img class="image bd-highlight rounded" src=" {{ url_for ('static',filename=fname) }} " alt="">
+            <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                <div class="name">{{search[1]}}</div>
+                {% if search[7]==1 %}
+                <span style="font-size: 15px" class="material-icons green-color">verified </span>
+                {% endif %}
+                <div class="d-flex flex-row w-100 ">
+                <div class= "d-flex flex-column p1">
+                    <div>Status</div>
+                    <div class="status">{{status}}</div>
+                </div>
+                <div class= "d-flex flex-column p2 w-100">
+                    <div>Rating</div>
+                    <div class="w-100 text-no-wrap star">
+                    {% for star in range(0,search[6]) %}
+                    <i class="fas fa-star" style="color: #ffe345;"></i> {% endfor %} {% for star in range(0,(5 - search[6])) %}<i class="far fa-star"></i> {% endfor %}
+                    </div>
+                </div>
+             </div>
+            </div>
+            <div class="button  d-flex flex-row align-items-center"><a href="/delete/savelist/{{search[4]}}"><button class="btn btn-primary btn-sm  w-100">Remove</button></a></div>
+            </div>
+        </div>
+        
+        
+        <!-- <var id="w-{{search[4]}}" hidden>{{search[4]}}</var>
+        <var id="now" hidden>{{now}}</var> -->
+        <!-- <div id="{{search[4]}}" class="container d-flex flex-row justify-content-between  rounded shadow my-2 card-contain w-100">
+            <div class="d-flex flex-row bd-highlight align-items-center justify-content-start w-100 ">
+                <div class="py-2 bd-highlight ">
+                    {% set fname = 'worker/' + search[4] + '/' + 'profile-' + search[4] + '.webp' %}
+                    <img class="image" src=" {{ url_for ('static',filename=fname) }} " alt=""> </div>
+                <div class=" d-flex flex-column  justify-content-center bd-highlight card-content mx-2 mt ">
+                    <div class="names">{{search[1]}}</div>
+                    <div class="bold-text">{{search[0]}}</div>
+                    <div class="stars">
+                        {% for star in range(0,search[6]) %}
+                        <i class="fas fa-star" style="color: #ffe345;"></i> {% endfor %} {% for star in range(0,(5 - search[6])) %}
+                        <i class="far fa-star"></i> {% endfor %}
+                    </div>
+                </div>
+            </div>               -->
+    <script>
+        document.getElementById("{{search[4]}}").addEventListener('click', worker_profile);
+
+        function worker_profile() {
+            // var worker_id = document.getElementById('w-{{search[4]}}').textContent;
+            // var now = document.getElementById('now').textContent;
+            // var detail = new Array(worker_id, now);
+            // console.log(detail);
+            window.location.href = '/worker/profile/public/{{rec_id}}/{{now}}/{{search[4]}}';
+        }
+    </script>
+
+    {% endfor %}
+</div>
+    {% include 'bottom_navbar.html' %}
+</body>
+
+</html>

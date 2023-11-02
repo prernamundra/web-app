@@ -1,0 +1,332 @@
+<!-- redirect from editwork.py -->
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100&family=Merriweather:ital,wght@0,700;1,900&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- slider-range -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+   
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>	
+
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'poppins', serif;
+        }
+        
+        .horizontally1 {
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .horizontally2 {
+            display: inline-flex;
+        }
+        
+        .addimage {
+            margin: 0 10px;
+        }
+        
+        .btn1 {
+            margin: 83px;
+            background-color: rgb(235, 213, 213);
+            border: none;
+        }
+        
+        .img {
+            width: 200px;
+            max-width: 200px;
+            height: 200px;
+            max-width: 200px;
+            object-fit: cover;
+            margin: 10px;
+            background-color: rgb(235, 213, 213);
+        }
+        .quote-imgs-thumbs {
+          background: #eee;
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+          margin: 1.5rem 0;
+          padding: 0.75rem;
+        }
+        .quote-imgs-thumbs--hidden {
+          display: none;
+        }
+        .img-preview-thumb {
+          background: #fff;
+          border: 1px solid #777;
+          border-radius: 0.25rem;
+          box-shadow: 0.125rem 0.125rem 0.0625rem rgba(0, 0, 0, 0.12);
+          margin-right: 1rem;
+          max-width: 140px;
+          padding: 0.25rem;
+        }
+        
+        /* Slider */
+        #slider-range{
+			background: lightgray;
+		}
+
+        #slider-range .ui-slider-range{
+            background: darkblue;
+        }
+
+        #amount{
+            color: rgb(65, 66, 66);
+            font-size: .85rem;
+        }
+        .range_input{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+        
+            <div style="padding-top:5px;" class="container-fluid d-flex flex-column bd-highlight my-2">
+                <form action="/edit/work/{{work[8]}}" enctype="multipart/form-data" class=" p-3" method="POST">
+
+                    <div class="form-floating">
+                        <input type="text" name="title" class="form-control" placeholder="Leave a comment here" id="input_title" value="{{work[9]}}" aria-required="true" required>
+                        <label for="input_title ">Title</label>
+                    </div>
+                    <select name="type" id="selectWork" class="form-select my-3" required>
+                        <option selected>{{work[0]}}</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Maid">Maid</option>
+                        <option value="Repairer">Repairer</option>
+                        <option value="Constructor">Constructor</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Painter">Painter</option>
+                        <option value="autorepair">Auto Repair</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Tailor">Tailor</option>
+                        <option value="Gardener">Gardener</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" class="form-control inputcontrol" id="inputWork" name="type" placeholder="Enter Work (if other selected) ">
+                    <div class="form-floating my-3">
+                        <textarea class="form-control " style="height: 4rem;" placeholder="Leave a comment here" name="description" id="input_desc" aria-required="true" required>{{work[1]}}</textarea>
+                        <label for="input_desc">Description</label>
+                    </div>
+
+             
+                    <div class="form-control mb-3">
+                        <p>
+                            <label for="amount">Budget: &nbsp;</label>
+                            <strong id="amount">
+                            
+                            </strong>
+                        </p>
+                        
+                        <div id="slider-range"></div>
+                    </div>
+                    <input id="range_from"type="number"  value="500" name="amount_from" class="range_input">
+
+                        <input id="range_to"type="Number" value= "10000" name="amount_to"class="range_input">  
+
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control " name="req_workers" placeholder="No. of requirements" value="{{work[6]}}" aria-required="true" required>
+                        <label for="input_addr">Requirements</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control " name="duration_of_work" placeholder="Duration of work" value="{{work[5]}}" aria-required="true" required>
+                        <label for="input_addr">Duration of work</label>
+                    </div>
+                    <!-- </div> -->
+                    <label class="addimage font1" for="appt">Select date & time</label>
+                    <div class="row my-3">
+                        <div class="col ">
+                            <input class="form-control horizontally1" type="date" value="{{work[7]}}" id="appt" name="date_of_work" aria-required="true" required>
+                  
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input id="input_addr" class="form-control" name="address" value="{{work[3]}}" required autocomplete="off"/>
+
+                    <label for="input_addr">Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Location" name="latitude" id="input_lat" aria-required="true" required>
+                    <input class="form-control" placeholder="Location" name="longitude" id="input_long" aria-required="true" required>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" pattern="^[0-9-+\s()]*$" placeholder="Alternate Number" name="alt_no" id="input_number" value="{{work[2]}}" defaultValue="{{work[2]}}" minlength="10" maxlength="10">
+                        <label for="input_title ">Alternate Number</label>
+                    </div>
+
+                    <h5 class="addimage">Add Images</h5>
+                
+                    <label for="upload_imgs" class="button hollow "style="display:none;">Select Your Images +</label>
+                    <input class="form-control  mt-3 show-for-sr" type="file" id="upload_imgs" name="image[]" accept="image/png,image/jpg,image/jpeg" multiple/>
+            
+                    <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
+                    <p>
+                    </p>
+                    <div class="d-grid gap-2 btn2 my-3">
+                        <button class="btn btn-primary font1" value="Submit" type="submit">Save Changes</button>
+                    </div>
+                </form>
+                <br>
+            </div>
+        
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi7MuwnyefX9ECu2c3igYWTw-MQoQHAzE&callback=initAutocomplete&libraries=places&v=weekly"
+    async
+  ></script> 
+
+  <script>
+    let autocomplete;
+      let addressInput;
+      let latitude;
+      let longitude;
+
+      function initAutocomplete() {
+      addressInput = document.querySelector("#input_addr");
+      latitude = document.querySelector("#input_lat");
+      longitude = document.querySelector("#input_long");
+      latitude.style.display ="none";
+      longitude.style.display ="none";
+      // Create the autocomplete object, restricting the search predictions to
+      // addresses in the US and Canada.
+      autocomplete = new google.maps.places.Autocomplete(addressInput, {
+          componentRestrictions: { country: ["in"] }
+      });
+      
+      addressInput.focus();
+      // When the user selects an address from the drop-down, populate the
+      // address fields in the form.
+      autocomplete.addListener("place_changed", fillInAddress);
+      }
+
+      function fillInAddress() {
+      // Get the place details from the autocomplete object.
+      const place = autocomplete.getPlace();
+      const lat = place.geometry.location.lat();
+      const long = place.geometry.location.lng();;
+      addressInput.value= place.formatted_address;
+      latitude.value=lat;
+      longitude.value=long;
+
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+</script> 
+    
+<script src="/home/ubuntu/integration/app/templates/Map_input.js" ></script>
+ <script>
+    var imgUpload = document.getElementById('upload_imgs')
+     , imgPreview = document.getElementById('img_preview')
+     , UploadForm = document.getElementById('img-upload-form')
+     , totalFiles
+     , previewTitle
+     , previewTitleText
+     , img;
+
+    imgUpload.addEventListener('change', previewImgs, false);
+    imgUploadForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Images Uploaded! (not really, but it would if this was on your website)');
+    }, false);
+
+    function previewImgs(event) {
+    totalFiles = imgUpload.files.length;
+  
+     if(!!totalFiles) {
+    imgPreview.classList.remove('quote-imgs-thumbs--hidden');
+    previewTitle = document.createElement('p');
+    previewTitle.style.fontWeight = 'bold';
+    previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
+    previewTitle.appendChild(previewTitleText);
+    imgPreview.appendChild(previewTitle);
+  }
+  
+  for(var i = 0; i < totalFiles; i++) {
+    img = document.createElement('img');
+    img.src = URL.createObjectURL(event.target.files[i]);
+    img.classList.add('img-preview-thumb');
+    imgPreview.appendChild(img);
+  }
+}
+    </script>
+    <!-- Google Maps API Script -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi7MuwnyefX9ECu2c3igYWTw-MQoQHAzE&callback=initAutocomplete&libraries=places&v=weekly"
+    async
+  ></script> 
+<!--   Calendar JS   -->
+    <script>
+       var date = new Date();
+        var tdate = date.getDate();
+        var month = date.getMonth() + 1;
+        
+
+        if(tdate < 10){
+            tdate = '0' + tdate;
+        }
+
+        if(month < 10){
+            month = '0' + month;
+        }
+        
+        var year = date.getFullYear();
+        
+        var minDate= year + '-' + month + '-' + tdate;
+        
+        document.getElementById("appt").setAttribute('min', minDate);
+        let workTextInput = document.querySelector("#inputWork");
+            let selectWork = document.querySelector("#selectWork");
+            workTextInput.style.display = "none";
+            workTextInput.ariaDisabled=true;
+            selectWork.addEventListener("change", function(){
+                if (selectWork.value==="Other") {
+                    workTextInput.style.display = ""
+                    workTextInput.ariaDisabled=false;}
+                else{
+                    workTextInput.remov
+                    workTextInput.style.display = "none";
+                    workTextInput.ariaDisabled=true;
+                }
+            }
+            ); 
+    </script>
+
+    <!-- Slider Js -->
+    
+	<script>
+		let range_to =document.querySelector("#range_to");
+        let range_from =document.querySelector("#range_from");
+		$(document).ready(function() {
+			// Slide Range
+			$( "#slider-range" ).slider({
+				range: true,
+				min: 0,
+				max: 100000,
+                
+				values: [ 500, 10000 ],
+                step: 500,
+				slide: function( event, ui ) {
+					$( "#amount" ).text( "₹" + ui.values[ 0 ] + " - ₹" + ui.values[ 1 ] );
+                    range_from.value = ui.values[0];    
+                range_to.value = ui.values[1];
+				}
+			});
+		} );
+	</script>
+    {% include 'bottom_navbar.html' %}
+</body>
+
+</html>

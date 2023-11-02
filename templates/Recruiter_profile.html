@@ -1,0 +1,290 @@
+<!-- render through recprofile.py -->
+{% include 'all_nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.51/dist/themes/light.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Google Font link     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+         :root {
+            --black: #545454;
+            --blue: #303F9F;
+            --light-blue: #4756b5;
+            --aliceblue: #F0F8FF;
+            --box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            font-family: "poppins";
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            font-size: 1rem;
+            border-radius: 4px;
+            padding: 3px 10px;
+            color: #fff;
+            background-color: var(--blue);
+        }
+        
+        i {
+            font-size: 1rem;
+        }
+        
+        .btn-primary:hover {
+            color: var(--aliceblue);
+            background-color: var(--light-blue);
+            transform: scale(1.01);
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-weight: 600;
+        }
+        
+        .head {
+            text-align: center;
+            display: revert;
+            font-size: 25px;
+            padding-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        img {
+            min-width: 6.5rem;
+            min-height: 6.5rem;
+            max-width: 6.5rem;
+            max-height: 6.5rem;
+            object-fit: cover;
+        }
+        
+        .fas1 {
+            position: absolute;
+            left: 8px;
+            top: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        
+        .fas2 {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        
+        .new {
+            border: 1px solid #ECEFF1;
+        }
+        
+        .text-info {
+            font-family: "poppins";
+        }
+        
+        .profile-recbg{
+            height: 100vh;
+            background: #fafafa;
+        }
+        
+        
+        .fa-star {
+            font-size: .8rem;
+        }
+        
+        @media all and (min-width:900px) {
+            .text_info {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media all and (min-width:900px) {
+            .num {
+                font-size: 1.1rem;
+            }
+        }
+        
+       
+        
+        
+        .text,
+        .text2,
+        .yellowstar {
+            cursor: pointer;
+        }
+        
+        .lb {
+            color: #4756b5;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 10px;
+        }
+        
+        @keyframes fading {
+            0% {
+                opacity: .1;
+            }
+            50% {
+                opacity: .2;
+            }
+            100% {
+                opacity: .1;
+            }
+        }
+        
+        a:hover {
+            color: var(--blue);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0 profile-recbg">
+        <div class="container-fluid card p-0 " style="background-color:#fff;">
+            <div class="d-flex flex-row bd-highlight p-1 mb-1">
+                {% set fname = 'recruiter/' + rec_id + '/' + 'profile-' + rec_id + '.webp' %}
+                <div class="p-2 bd-highlight">
+                    <img src=" {{ url_for ('static',filename=fname) }} " alt=""></i>
+                </div>
+                <div class="p-2 bd-highlight align-items-center">
+                    <div class="semi-strong">{{profile[0]}} &nbsp;&nbsp;
+                        <a class="edit-icon " href="/edit/rec"> <i class="fas fa-edit " style="color: var(--black); font-size: 1rem; "></i>
+                        </a>
+
+                    </div>
+                
+                    <div class="stars">
+                        {% for star in range(0,profile[4]) %}
+                        <i class="fas fa-star" style="color: #ffe345;"></i> {% endfor %} {% for star in range(0,(5 - profile[4])) %}
+                        <i class="far fa-star"></i> {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center border-top border-bottom py-2 work-stat">
+            <div class="p-2 bd-highlight text-center ">
+                <div>Worker Hired</div>
+                <h6 style="font-weight: 600;">{{work_hiered}}</h6>
+            </div>
+            <div class="p-2 bd-highlight text-center">
+                <div>Work posted</div>
+                <h6 style="font-weight: 600;">{{work_posted}}</h6>
+            </div>
+        </div>
+
+
+    
+
+        <!-- address and phone nmumber -->
+        <div class="container-fluid my-3" style="font-weight: 600;">
+            <h5>Personal Information</h5>
+            <div class="card py-3 px-5">
+                <div class="phone">
+                    <i class="fas fas3 fa-phone-alt  " style="display: inline-block; color:#545454; "></i>
+                    <span class="num " style="display: inline-block; " >
+                    <div class="mx-3 "><span style="color:#545454; font-weight:500; ">{{profile[1]}}</span> </div>
+                    </span>
+                </div>
+                <br>
+                <div class="phone d-flex flex-row">
+                    <i class="fas fas3 fa-map-marker-alt add " style=" color:#545454; display: inline-block; "></i>
+                    <span class="num flex-grow-1" style="display: inline-block; ">
+                        <div class="mx-3 "> <span style=" color:#545454; font-weight: 500; ">
+                        {{profile[2]}}</span></div> 
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    
+
+        {% if reviews != 0 %}
+        <div class="container-fluid my-3 ">
+            <h5>Reviews & Ratings</h5>
+            <div class=" card swiper mySwiper ">
+                <div class="my-auto swiper-wrapper " style="width: 10rem; ">
+                    {% for review in reviews %}
+                    <div class="my-md-3 swiper-slide card-body d-flex flex-row bd-highlight ">              
+                        <div class="bd-highligh d-flex flex-row justify-content-center align-items-evenly my-3 ">
+                            <img src="2_new.webp " alt=" " style="width: 4rem; height: 4rem; " class="rounded mx-auto ">
+                            <div class="d-inline-flex flex-column text-justify mx-3 ">
+                            <h5 class="card-title ">{{review[0]}}</h5>
+                            <p class="card-text text-left " style="font-size: 1rem; ">{{review[2]}}
+                            </p></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+                <div class="swiper-button-next "></div>
+                <div class="swiper-button-prev "></div>
+                {% endif %}
+            </div>
+        </div>
+        <br>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+    <script>
+        var swiper = new Swiper(".mySwiper ", {
+            
+            navigation: {
+              nextEl: ".swiper-button-next ",
+              prevEl: ".swiper-button-prev ",
+            },
+          });
+    </script>
+    {% include 'bottom_navbar.html' %}
+</body>
+
+</html>

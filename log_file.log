@@ -1,0 +1,781 @@
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:16:16 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:16:16 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:16:16 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:16:16 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x106802ca0>
+DEBUG -- 11/02/2023 01:16:16 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:16:16 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:16:16 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:16:16 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x106743880>
+DEBUG -- 11/02/2023 01:16:16 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:16:16 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:16:16 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:16:16 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:16:16 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:16:16 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:16:16 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:16:16 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:17:40 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:17:40 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:17:40 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:17:40 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x105096ca0>
+DEBUG -- 11/02/2023 01:17:40 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:17:40 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:17:40 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:17:40 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10456b880>
+DEBUG -- 11/02/2023 01:17:40 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:17:40 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:17:40 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:17:40 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:17:40 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:17:40 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:17:40 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:17:40 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:21:12 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:21:12 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:21:12 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:21:12 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x10266aca0>
+DEBUG -- 11/02/2023 01:21:12 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:21:12 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:21:12 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:21:12 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x1025ab880>
+DEBUG -- 11/02/2023 01:21:12 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:21:12 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:21:12 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:21:12 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:21:12 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:21:12 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:21:12 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:21:12 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:21:20 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:21:20 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:21:20 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:21:20 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x10282aca0>
+DEBUG -- 11/02/2023 01:21:20 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:21:20 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:21:20 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:21:20 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10260f880>
+DEBUG -- 11/02/2023 01:21:20 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:21:20 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:21:20 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:21:20 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:21:20 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:21:20 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:21:20 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:21:20 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:27:46 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:27:46 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:27:46 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:27:46 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x1047deca0>
+DEBUG -- 11/02/2023 01:27:46 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:27:46 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:27:46 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:27:46 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10471f880>
+DEBUG -- 11/02/2023 01:27:46 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:27:46 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:27:46 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:27:46 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:27:46 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:27:46 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:27:46 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:27:46 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+INFO -- 11/02/2023 01:27:47 AM -- _log::96 -- [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.111:8080
+INFO -- 11/02/2023 01:27:47 AM -- _log::96 -- [33mPress CTRL+C to quit[0m
+INFO -- 11/02/2023 01:27:47 AM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:27:47 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:27:47 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:27:47 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:27:47 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x107056ca0>
+DEBUG -- 11/02/2023 01:27:47 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:27:47 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:27:47 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:27:47 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x106f97880>
+DEBUG -- 11/02/2023 01:27:47 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:27:47 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:27:47 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:27:47 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:27:47 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:27:47 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:27:47 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:27:47 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 01:27:47 AM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 01:27:47 AM -- _log::96 --  * Debugger PIN: 354-383-459
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:31:18 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:31:18 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:31:18 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:31:18 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x103a2aca0>
+DEBUG -- 11/02/2023 01:31:18 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:31:18 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:31:18 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:31:18 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10386b880>
+DEBUG -- 11/02/2023 01:31:18 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:31:18 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:31:18 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:31:18 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:31:18 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:31:18 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:31:18 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:31:18 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+INFO -- 11/02/2023 01:31:19 AM -- _log::96 -- [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.111:8080
+INFO -- 11/02/2023 01:31:19 AM -- _log::96 -- [33mPress CTRL+C to quit[0m
+INFO -- 11/02/2023 01:31:19 AM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 01:31:19 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 01:31:19 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 01:31:19 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 01:31:19 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x107d8aca0>
+DEBUG -- 11/02/2023 01:31:19 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 01:31:19 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 01:31:19 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 01:31:19 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x107cc7880>
+DEBUG -- 11/02/2023 01:31:19 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 01:31:19 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 01:31:19 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 01:31:19 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 01:31:19 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 01:31:19 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 01:31:19 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 01:31:19 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 01:31:19 AM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 01:31:19 AM -- _log::96 --  * Debugger PIN: 354-383-459
+INFO -- 11/02/2023 01:32:39 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:39] "GET / HTTP/1.1" 200 -
+INFO -- 11/02/2023 01:32:39 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:39] "GET /static/ajax-loader.gif HTTP/1.1" 200 -
+INFO -- 11/02/2023 01:32:39 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:39] "GET /static/images/landing-bg.webp HTTP/1.1" 200 -
+INFO -- 11/02/2023 01:32:39 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 01:32:53 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:53] "GET /login/worker HTTP/1.1" 200 -
+INFO -- 11/02/2023 01:32:53 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:53] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 01:32:53 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:53] "GET /static/images/Mobile-graphic.webp HTTP/1.1" 200 -
+INFO -- 11/02/2023 01:32:54 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:32:54] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 01:33:00 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:33:00] "GET /login/rec HTTP/1.1" 200 -
+INFO -- 11/02/2023 01:33:00 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:33:00] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 01:33:00 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:33:00] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 01:33:00 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 01:33:00] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x1072feca0>
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10723b880>
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 11:36:41 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+INFO -- 11/02/2023 11:36:41 AM -- _log::96 -- [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.249.86:8080
+INFO -- 11/02/2023 11:36:41 AM -- _log::96 -- [33mPress CTRL+C to quit[0m
+INFO -- 11/02/2023 11:36:41 AM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 11:36:41 AM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x10702eca0>
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x106f6f880>
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 11:36:41 AM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 11:36:41 AM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 11:36:41 AM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 11:36:41 AM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 11:36:41 AM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 11:36:41 AM -- _log::96 --  * Debugger PIN: 354-383-459
+INFO -- 11/02/2023 11:36:54 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:54] "GET / HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:36:54 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:54] "[36mGET /static/images/landing-bg.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:36:54 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:54] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:36:56 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:56] "GET / HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:36:56 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:56] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:36:56 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:56] "[36mGET /static/images/landing-bg.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:36:57 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:57] "GET /login/worker HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:36:57 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:57] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:36:57 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:57] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:36:57 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:36:57] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+ERROR -- 11/02/2023 11:37:01 AM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 19, in insert
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown MySQL server host 'uprevolins.cryjzxrydmbi.ap-south-1.rds.amazonaws.com' (8)")
+ERROR -- 11/02/2023 11:37:01 AM -- dbError::19 -- Database Error::update error
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 40, in update
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown MySQL server host 'uprevolins.cryjzxrydmbi.ap-south-1.rds.amazonaws.com' (8)")
+INFO -- 11/02/2023 11:37:01 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:01] "[32mGET /send/otp/worker/8604622776?phone=8604622776 HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 11:37:01 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:01] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:37:01 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:01] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:37:01 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:01] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:37:01 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:01] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+ERROR -- 11/02/2023 11:37:05 AM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 29, in select
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown MySQL server host 'uprevolins.cryjzxrydmbi.ap-south-1.rds.amazonaws.com' (8)")
+ERROR -- 11/02/2023 11:37:05 AM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 11:37:05 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:05] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 11:37:05 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:05] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:37:05 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:05] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:37:05 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:05] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:37:05 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:05] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+ERROR -- 11/02/2023 11:37:16 AM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 29, in select
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown MySQL server host 'uprevolins.cryjzxrydmbi.ap-south-1.rds.amazonaws.com' (8)")
+ERROR -- 11/02/2023 11:37:16 AM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 11:37:16 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:16] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 11:37:16 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:16] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:37:16 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:16] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:37:16 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:16] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:37:16 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:16] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:37:40 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:40] "[33mGET /verify/otp/worker/8604622776/log HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:37:45 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:45] "[33mGET /verify/otp/worker/8604622776/logs HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:37:52 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:37:52] "[33mGET /logs HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:38:06 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:38:06] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:55:12 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:12] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:55:12 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:12] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:55:12 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:12] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:55:12 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:12] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:55:13 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:13] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:55:13 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:13] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:55:13 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:13] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:55:13 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:13] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+ERROR -- 11/02/2023 11:55:23 AM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 29, in select
+    cursor = mysql.connection.cursor()
+             ^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+                   ^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2005, "Unknown MySQL server host 'uprevolins.cryjzxrydmbi.ap-south-1.rds.amazonaws.com' (8)")
+ERROR -- 11/02/2023 11:55:23 AM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 11:55:23 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:23] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 11:55:23 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:23] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:55:23 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:23] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 11:55:23 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:23] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:55:23 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:23] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 11:55:28 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:55:28] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 11:57:43 AM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 11:57:43] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:17:33 PM -- _log::96 --  * Detected change in '/Users/prernamundra/Downloads/integration-main/app/config/db.py', reloading
+INFO -- 11/02/2023 12:17:33 PM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:17:33 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:17:33 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:17:33 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:17:33 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x109096ca0>
+DEBUG -- 11/02/2023 12:17:33 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:17:33 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:17:33 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:17:33 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10846b880>
+DEBUG -- 11/02/2023 12:17:33 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:17:33 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:17:33 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:17:33 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:17:33 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:17:33 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:17:33 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:17:33 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 12:17:34 PM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 12:17:34 PM -- _log::96 --  * Debugger PIN: 354-383-459
+ERROR -- 11/02/2023 12:17:40 PM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 30, in select
+    cursor.execute(f"SELECT {','.join(col)} FROM {table} WHERE ({' AND '.join(str(x) for x in func(key,value))}) ORDER BY sn desc;")
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'sn' in 'order clause'")
+ERROR -- 11/02/2023 12:17:40 PM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 12:17:40 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:17:40] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:17:40 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:17:40] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:17:40 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:17:40] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:17:40 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:17:40] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:17:40 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:17:40] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:17:44 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:17:44] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:18:41 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:41] "GET / HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:18:41 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:41] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:18:41 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:41] "[36mGET /static/images/landing-bg.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:18:43 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:43] "GET /login/worker HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:18:43 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:43] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:18:43 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:43] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:18:43 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:43] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:18:47 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:47] "[32mGET /send/otp/worker/8604622776?phone=8604622776 HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:18:47 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:47] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:18:47 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:47] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:18:47 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:47] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:18:47 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:47] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+ERROR -- 11/02/2023 12:18:50 PM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 30, in select
+    cursor.execute(f"SELECT {','.join(col)} FROM {table} WHERE ({' AND '.join(str(x) for x in func(key,value))}) ORDER BY sn desc;")
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'sn' in 'order clause'")
+ERROR -- 11/02/2023 12:18:50 PM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 12:18:50 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:50] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:18:50 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:50] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:18:50 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:50] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:18:50 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:50] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:18:50 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:18:50] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:23:43 PM -- _log::96 --  * Detected change in '/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py', reloading
+INFO -- 11/02/2023 12:23:43 PM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:23:44 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:23:44 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:23:44 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:23:44 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x10422aca0>
+DEBUG -- 11/02/2023 12:23:44 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:23:44 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:23:44 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:23:44 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10356b880>
+DEBUG -- 11/02/2023 12:23:44 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:23:44 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:23:44 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:23:44 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:23:44 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:23:44 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:23:44 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:23:44 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 12:23:44 PM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 12:23:44 PM -- _log::96 --  * Debugger PIN: 354-383-459
+INFO -- 11/02/2023 12:23:59 PM -- _log::96 --  * Detected change in '/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py', reloading
+INFO -- 11/02/2023 12:23:59 PM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:23:59 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:23:59 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:23:59 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:23:59 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x10680eca0>
+DEBUG -- 11/02/2023 12:23:59 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:23:59 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:23:59 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:23:59 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10674f880>
+DEBUG -- 11/02/2023 12:23:59 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:23:59 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:23:59 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:23:59 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:23:59 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:23:59 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:23:59 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:23:59 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 12:23:59 PM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 12:23:59 PM -- _log::96 --  * Debugger PIN: 354-383-459
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:24:26 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:24:26 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:24:26 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:24:26 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x107c2aca0>
+DEBUG -- 11/02/2023 12:24:26 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:24:26 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:24:26 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:24:26 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x107a0b880>
+DEBUG -- 11/02/2023 12:24:26 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:24:26 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:24:26 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:24:26 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:24:26 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:24:26 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:24:26 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:24:26 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+INFO -- 11/02/2023 12:24:33 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:33] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:24:33 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:33] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:24:33 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:33] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:24:33 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:33] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+ERROR -- 11/02/2023 12:24:37 PM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 30, in select
+    lognRes.successful(table, col, key, value, "input to db")
+TypeError: successful() takes 2 positional arguments but 5 were given
+ERROR -- 11/02/2023 12:24:37 PM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 12:24:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:37] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:24:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:37] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:24:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:37] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:24:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:37] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:24:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:37] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:24:46 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:24:46] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:26:29 PM -- _log::96 --  * Detected change in '/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py', reloading
+INFO -- 11/02/2023 12:26:29 PM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:26:29 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:26:29 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:26:29 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:26:29 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x104abeca0>
+DEBUG -- 11/02/2023 12:26:29 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:26:29 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:26:29 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:26:29 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x1049ff880>
+DEBUG -- 11/02/2023 12:26:29 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:26:29 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:26:29 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:26:29 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:26:29 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:26:29 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:26:29 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:26:29 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 12:26:30 PM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 12:26:30 PM -- _log::96 --  * Debugger PIN: 354-383-459
+INFO -- 11/02/2023 12:26:37 PM -- successful::31 -- Successful::{table}, {col}, {key}, {value}
+ERROR -- 11/02/2023 12:26:37 PM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 31, in select
+    cursor.execute(f"SELECT {','.join(col)} FROM {table} WHERE ({' AND '.join(str(x) for x in func(key,value))}) ORDER BY sn desc;")
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'sn' in 'order clause'")
+ERROR -- 11/02/2023 12:26:37 PM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 12:26:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:26:37] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:26:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:26:37] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:26:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:26:37] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:26:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:26:37] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:26:37 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:26:37] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:26:48 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:26:48] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:28:16 PM -- _log::96 --  * Detected change in '/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py', reloading
+INFO -- 11/02/2023 12:28:16 PM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:28:16 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:28:16 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:28:16 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:28:16 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x10742aca0>
+DEBUG -- 11/02/2023 12:28:16 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:28:16 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:28:16 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:28:16 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x10720f880>
+DEBUG -- 11/02/2023 12:28:16 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:28:16 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:28:16 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:28:16 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:28:16 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:28:16 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:28:16 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:28:16 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 12:28:16 PM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 12:28:16 PM -- _log::96 --  * Debugger PIN: 354-383-459
+INFO -- 11/02/2023 12:28:22 PM -- successful::31 -- Successful::otp, ['otp'], ['phone'], [8604622776]
+ERROR -- 11/02/2023 12:28:22 PM -- dbError::19 -- Database Error::0
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/models/dbModel.py", line 31, in select
+    cursor.execute(f"SELECT {','.join(col)} FROM {table} WHERE ({' AND '.join(str(x) for x in func(key,value))}) ORDER BY sn desc;")
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/MySQLdb/connections.py", line 255, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'sn' in 'order clause'")
+ERROR -- 11/02/2023 12:28:22 PM -- valueError::35 -- Invalid Value::{'phone': '8604622776', 'otp': '0000'}
+NoneType: None
+INFO -- 11/02/2023 12:28:22 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:28:22] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:28:22 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:28:22] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:28:22 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:28:22] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:28:22 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:28:22] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:28:22 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:28:22] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:28:26 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:28:26] "GET /log HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:35:03 PM -- _log::96 --  * Detected change in '/Users/prernamundra/Downloads/integration-main/app/modules/sms.py', reloading
+INFO -- 11/02/2023 12:35:03 PM -- _log::96 --  * Restarting with stat
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG -- 11/02/2023 12:35:03 PM -- _alias_event_name::482 -- Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG -- 11/02/2023 12:35:03 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG -- 11/02/2023 12:35:03 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG -- 11/02/2023 12:35:03 PM -- _emit::238 -- Event choose-service-name: calling handler <function handle_service_name_alias at 0x1069aeca0>
+DEBUG -- 11/02/2023 12:35:03 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/service-2.json
+DEBUG -- 11/02/2023 12:35:03 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/sns/2010-03-31/endpoint-rule-set-1.json.gz
+DEBUG -- 11/02/2023 12:35:03 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG -- 11/02/2023 12:35:03 PM -- _emit::238 -- Event creating-client-class.sns: calling handler <function add_generate_presigned_url at 0x1068ef880>
+DEBUG -- 11/02/2023 12:35:03 PM -- provide::942 -- Looking for endpoint for sns via: environment_service
+DEBUG -- 11/02/2023 12:35:03 PM -- provide::942 -- Looking for endpoint for sns via: environment_global
+DEBUG -- 11/02/2023 12:35:03 PM -- provide::942 -- Looking for endpoint for sns via: config_service
+DEBUG -- 11/02/2023 12:35:03 PM -- provide::942 -- Looking for endpoint for sns via: config_global
+DEBUG -- 11/02/2023 12:35:03 PM -- provide::958 -- No configured endpoint found.
+DEBUG -- 11/02/2023 12:35:03 PM -- create_endpoint::408 -- Setting sns timeout as (60, 60)
+DEBUG -- 11/02/2023 12:35:03 PM -- _load_file::180 -- Loading JSON file: /Users/prernamundra/Downloads/integration-main/vn/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG -- 11/02/2023 12:35:03 PM -- _register_legacy_retries::282 -- Registering retry handlers for service: sns
+WARNING -- 11/02/2023 12:35:03 PM -- _log::96 --  * Debugger is active!
+INFO -- 11/02/2023 12:35:03 PM -- _log::96 --  * Debugger PIN: 354-383-459
+INFO -- 11/02/2023 12:35:11 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:11] "GET /login/worker HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:35:16 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:16] "[33mGET /login?from=/ HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:35:24 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:24] "[32mGET /send/otp/worker/8604622776?phone=8604622776 HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:35:24 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:24] "GET /verify/otp/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:35:24 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:24] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:35:24 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:24] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:35:24 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:24] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:35:30 PM -- successful::31 -- Successful::otp, ['otp'], ['phone'], [8604622776]
+INFO -- 11/02/2023 12:35:30 PM -- successful::31 -- Successful::(('1000',),)
+INFO -- 11/02/2023 12:35:30 PM -- successful::31 -- Successful::worker, ['phone', 'worker_id'], ['phone'], [8604622776]
+INFO -- 11/02/2023 12:35:30 PM -- successful::31 -- Successful::()
+INFO -- 11/02/2023 12:35:30 PM -- successful::31 -- Successful::{'phone': '8604622776', 'otp': '1000'}
+INFO -- 11/02/2023 12:35:30 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:30] "[32mPOST /login/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:35:30 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:30] "GET /register/worker/8604622776 HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:35:30 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:30] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:35:30 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:30] "[33mGET /home/ubuntu/integration/app/templates/Map_input.js HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:35:30 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:30] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:35:51 PM -- successful::31 -- Successful::worker, ['worker_id'], ['phone'], [8604622776]
+INFO -- 11/02/2023 12:35:51 PM -- successful::31 -- Successful::()
+CRITICAL -- 11/02/2023 12:35:51 PM -- unExpected::39 -- Function Error
+ERROR -- 11/02/2023 12:35:51 PM -- unExpected::40 -- Function Error
+Traceback (most recent call last):
+  File "/Users/prernamundra/Downloads/integration-main/app/modules/registration.py", line 78, in post
+    if  create_folder(worker_id):
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prernamundra/Downloads/integration-main/app/modules/registration.py", line 232, in create_folder
+    os.mkdir(image_path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/integration/app/static/worker/worker-41fda888-794e-11ee-9f97-969db25dd476'
+INFO -- 11/02/2023 12:35:51 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:51] "[32mPOST /register/worker HTTP/1.1[0m" 302 -
+INFO -- 11/02/2023 12:35:51 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:51] "GET /login/worker HTTP/1.1" 200 -
+INFO -- 11/02/2023 12:35:51 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:51] "[33mGET /navbars.css HTTP/1.1[0m" 404 -
+INFO -- 11/02/2023 12:35:51 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:51] "[36mGET /static/ajax-loader.gif HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:35:51 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:35:51] "[36mGET /static/images/Mobile-graphic.webp HTTP/1.1[0m" 304 -
+INFO -- 11/02/2023 12:41:27 PM -- _log::96 -- 127.0.0.1 - - [02/Nov/2023 12:41:27] "GET /log HTTP/1.1" 200 -
